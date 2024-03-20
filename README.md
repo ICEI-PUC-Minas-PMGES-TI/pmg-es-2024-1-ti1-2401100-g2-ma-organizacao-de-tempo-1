@@ -4,7 +4,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 ## Alunos integrantes da equipe
 
 * João Victor dos Santos Nogueira
-* Nome completo do aluno 2
+* Ítalo Vinhas Antunes Silva
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 
