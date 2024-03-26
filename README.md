@@ -10,8 +10,9 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Danilo Boechat Seufitelli
+* Diego Augusto de Faria Barros
+* Simone Alves Nogueira
 
 ## Instruções de utilização
 
