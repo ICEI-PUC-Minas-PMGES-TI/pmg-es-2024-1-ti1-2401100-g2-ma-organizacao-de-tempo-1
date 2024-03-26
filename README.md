@@ -6,7 +6,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 * João Victor dos Santos Nogueira
 * Ítalo Vinhas Antunes Silva
 * João Paulo Gobira Lopes Costa
-* Nome completo do aluno 4
+* Arthur Modesto Couto
 
 ## Professores responsáveis
 
