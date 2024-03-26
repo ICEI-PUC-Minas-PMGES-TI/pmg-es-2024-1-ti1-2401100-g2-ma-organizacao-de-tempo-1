@@ -7,6 +7,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 * Ítalo Vinhas Antunes Silva
 * João Paulo Gobira Lopes Costa
 * Arthur Modesto Couto
+* Bernardo Pace Pereira Arantes
 
 ## Professores responsáveis
 
