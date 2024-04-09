@@ -1,7 +1,7 @@
 # Informações do Projeto
 `TÍTULO DO PROJETO`  
 
-...... CronoFlex ......
+CronoFlex
 
 `CURSO` 
 
@@ -161,10 +161,12 @@ Os membros do grupo são:
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                   |
+|--------------------|------------------------------------|------------------------------------------|
+|Usuário             | Registrar minhas tarefas           | Conseguir organiza-las                   |
+|Usuário             | Lembrar minhas tarefas             | Não me esquecer de cumpri-las            |
+|Usuário             | De alguma motivação                | Conseguir realizar as tarefas devidamente|
+|Administrador       | De uma pagina para artigos         | Colocar escritos que auxiliem o usuario  | 
 
 > Apresente aqui as histórias de usuário que são relevantes para o
 > projeto de sua solução. As Histórias de Usuário consistem em uma
