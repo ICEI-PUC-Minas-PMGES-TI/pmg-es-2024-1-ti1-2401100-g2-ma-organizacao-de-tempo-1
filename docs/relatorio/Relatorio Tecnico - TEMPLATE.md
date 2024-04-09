@@ -1,7 +1,7 @@
 # Informações do Projeto
 `TÍTULO DO PROJETO`  
 
-......  COLOQUE AQUI O SEU TEXTO ......
+...... CronoFlex ......
 
 `CURSO` 
 
@@ -9,13 +9,12 @@
 
 ## Participantes
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Inclua a lista dos membros da equipe com seus nomes completos.
->
-> Os membros do grupo são: 
-> - Fulano da Silva
-> - Ciclano Albuquerque
+Os membros do grupo são: 
+> - Arthur Modesto Couto
+> - Bernardo Pace Pereira Arantes
+> - Italo Vinhas Antunes Sulva
+> - João Paulo Gobira Lopes Costa
+> - João Victor dos Santos Nogueira
 
 # Estrutura do Documento
 
