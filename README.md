@@ -1,5 +1,5 @@
 # CronoFlex
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+O CronoFlex é um serviço que busca auxiliar na má organização de tempo do usuário, incentivando-o a criar e seguir uma rotina com dicas e diferentes metodologias e funcionalidades. 
 
 ## Alunos integrantes da equipe
 
