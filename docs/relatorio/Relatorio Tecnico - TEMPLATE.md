@@ -5,7 +5,7 @@ CronoFlex
 
 `CURSO` 
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Engenharia de Software - CAMPUS CORAÇÃO EUCARÍSTICO - NOITE
 
 ## Participantes
 
@@ -55,56 +55,19 @@ Os membros do grupo são:
 
 ## Problema
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Nesse momento você deve apresentar o problema que a sua aplicação deve
-> resolver. No entanto, não é a hora de comentar sobre a aplicação.
-> Descreva também o contexto em que essa aplicação será usada, se
-> houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de
-> fato existir, pois ainda não é a hora de apresentar requisitos
-> detalhados ou projetos.
->
-> Nesse momento, o grupo pode optar por fazer uso
-> de ferramentas como Design Thinking, que permite um olhar de ponta a
-> ponta para o problema.
->
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+O problema a ser resolvido é o de Má Organização de Tempo, que é causado por diversos motivos como, procastinação, falta de planejamento, desorganização, entre outros. O contexto da aplicação é pessoal, sendo mais utilizado para organização pessoal. 
 
 ## Objetivos
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Aqui você deve descrever os objetivos do trabalho indicando que o
-> objetivo geral é desenvolver um software para solucionar o problema
-> apresentado acima. Apresente também alguns (pelo menos 2) objetivos
-> específicos dependendo de onde você vai querer concentrar a sua
-> prática investigativa, ou como você vai aprofundar no seu trabalho.
-> 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+O objetivo do projeto é desenvolver um software para solucionar a má organização de tempo. Dessa forma, o software tem propósito de incentivar o usuário a melhorar sua organização através de recompensas dentro da aplicação e um assistente que auxilie o usuário.
 
 ## Justificativa
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Descreva a importância ou a motivação para trabalhar com esta aplicação
-> que você escolheu. Indique as razões pelas quais você escolheu seus
-> objetivos específicos ou as razões para aprofundar em certos aspectos
-> do software.
-> 
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e
-> dados estatísticos, que podem ser apresentados, com o objetivo de
-> esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+A importância de trabalhar com esta aplicação é a forma que o serviço facilita em diversas situações do cotidiano de diversos usuários, incluindo os desenvolvedores do projeto que também são beneficiados com o software. Além disso, com as recompensas e o assistente, a aplicação se torna diferente das outras, contribuindo para o incentivo de melhorar a organização do tempo.
 
 ## Público-Alvo
 
-......  COLOQUE AQUI O SEU TEXTO ......
+O público-alvo é principalmente para aqueles que possuem dificuldade de organizar o seu tempo, dentre estudantes, autônomos, estagiários, professores, desenvolvedores e outros. 
 
 > Descreva quem serão as pessoas que usarão a sua aplicação indicando os
 > diferentes perfis. O objetivo aqui não é definir quem serão os
