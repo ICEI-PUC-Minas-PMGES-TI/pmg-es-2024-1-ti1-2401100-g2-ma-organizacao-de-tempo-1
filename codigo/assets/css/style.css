@@ -1,0 +1,86 @@
+*,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Definição da fonte personalizada */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+/* Configurações do layout main */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#cor {
+    height: 100vh;
+    background: linear-gradient(to bottom, #f3d64e 0%, #78c5d6 50%, #008bba 100%);
+}
+
+#Imagem {
+    text-align: center;
+    margin-top: 20%;
+}
+
+#Logo {
+    width: 400px;
+}
+
+#Form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 10% auto;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+#Form h1 {
+    align-self: center;
+    margin-left: -16%;
+}
+#Form input,label, button{
+    margin-left: 10px;
+}
+input {
+    border-radius: 10px;
+    padding: 6px;
+    border: solid 1px;
+    width: 80%;
+}
+
+button {
+    border-radius: 10px;
+    padding: 6px;
+    border: solid 2px #A1D298;
+    background-color: #52A7C8;
+    color: #FFFFFF;
+    width: 60%;
+    margin-left: 10%;
+}
+
+@media (max-width: 600px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #cor {
+        height: 30vh;
+    }
+
+    #Imagem {
+        margin-top: 10px;
+        margin-left: 5px;
+        width: 350px;
+    }
+
+    #Form {
+        width: 80%;
+    }
+}
