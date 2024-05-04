@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Definição da fonte personalizada */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+
+header{
+    background-color: rgba(113,201,236,255);
+}
+
+form{
+    background-color: rgba(113,201,236,255);
+}
+
+#botao-adicionar{
+    background-color: rgba(113,201,236,255);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    border-color: rgb(245, 205, 27);
+}
+
+#inputs{
+    background-color: rgba(172,215,235,255);
+    border-radius: 10px;
+    border-color: rgb(245, 205, 27);
+}
+
+
+
+
+
