@@ -16,11 +16,23 @@ header{
     background-color: rgba(113,201,236,255);
 }
 
+#main{
+    padding-bottom: 300px;
+}
+
 form{
     background-color: rgba(113,201,236,255);
 }
 
 #botao-adicionar{
+    background-color: rgba(113,201,236,255);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    border-color: rgb(245, 205, 27);
+}
+
+#botao-cancelar{
     background-color: rgba(113,201,236,255);
     color: white;
     padding: 5px;

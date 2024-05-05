@@ -11,8 +11,8 @@
     <header>
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
-              <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-evenly" style="width: 25%;"">
                   <li class="nav-item border border-3 border-warning rounded-pill px-3">
                     <a class="nav-link text-white fw-bold" href="#">Início</a>
                   </li>
@@ -23,7 +23,7 @@
                     <a class="nav-link text-white fw-bold" href="#">Dicas</a>
                   </li>
                 </ul>
-                <form class="d-flex justify-content-space-between">
+                <form class="d-flex justify-content-between">
                   <a href="#"><img src="assets/images/perfil-de-usuario.png" alt="perfil" style="width: auto; height: 50px;" class="px-3"></a>
                   <a href="#"><img src="assets/images/config.png" alt="config" style="width: auto; height: 50px;"></a>
                 </form>
@@ -33,27 +33,30 @@
     </header>
 
     <main>
-        <div class="tabela-tarefa d-flex justify-content-center align-items-center">
-            <form action="" class="d-flex flex-column justify-content-center align-items-center border border-3 rounded p-5 border-warning" style="width: 25%;">
-                <label for="tarefa" class="fw-bold p-1">Tarefa</label>
-                <input type="text" name="tarefa" id="inputs">
-                <label for="inicio" class="fw-bold p-1">Início</label>
-                <input type="datetime-local" name="inicio" id="inputs">
-                <label for="inicio" class="fw-bold p-1">Fim</label>
-                <input type="datetime-local" name="inicio" id="inputs">
-                <label for="frequencia" class="fw-bold p-1">Frequência</label>
-                <div class="frequencia d-flex flex-wrap p-2">
-                    <input type="radio" name="diaria">
-                    <label for="diaria" class="px-2 fw-bold " >Diária</label>
-                    <input type="radio" name="semanal" class="px-1">
-                    <label for="semanal" class="px-2 fw-bold">Semanal</label>
-                    <input type="radio" name="mensal">
-                    <label for="mensal" class="px-2 fw-bold">Mensal</label>
+        <div class="d-flex justify-content-center align-items-center" style="max-width: 1920px; min-height: 1080px;" id="main">
+            <form action="" class="d-flex flex-column justify-content-center align-items-center border border-3 rounded p-3 border-warning" style="width: 35%;">
+                <label for="tarefa" class="p-1 fw-bold fs-2">Tarefa</label>
+                <input type="text" name="tarefa" id="inputs" style="width: 298px; height: 46px;">
+                <label for="inicio" class="fw-bold p-1 fs-2">Início</label>
+                <input type="datetime-local" name="inicio" id="inputs" style="width: 298px; height: 46px;" class="px-3">
+                <label for="inicio" class="fw-bold p-1 fs-2">Fim</label>
+                <input type="datetime-local" name="inicio" id="inputs" style="width: 298px; height: 46px;" class="px-3">
+                <label for="frequencia" class="fw-bold p-1 fs-2">Frequência</label>
+                <div class="frequencia d-flex flex-wrap pb-2">
+                    <input type="radio" name="frequencia" id="diaria" value="diaria">
+                    <label for="diaria" class="px-2 fw-bold fs-5" >Diária</label>
+                    <input type="radio" name="frequencia" id="semanal" value="semanal" class="px-1">
+                    <label for="semanal" class="px-2 fw-bold fs-5">Semanal</label>
+                    <input type="radio" name="frequencia" id="mensal" value="mensal">
+                    <label for="mensal" class="px-2 fw-bold fs-5">Mensal</label>
                 </div>
-                <button id="botao-adicionar" type="button" class="p-1">Adicionar Tarefa</button>
-                <img src="assets/images/Logo.png" alt="logo" style="width: auto; height: 70px;" class="p-1">
+                <div id="botoes" class="d-flex justify-content-between" style="width: 300px;">
+                    <button id="botao-cancelar" type="button" class="btn border-3 fs-5 d-flex align-items-center justify-content-center " style="width: 147px; height: 46px;">Cancelar</button>
+                    <button id="botao-adicionar" type="button" class="btn border-3 fs-5 d-flex align-items-center justify-content-center" style="width: 147px; height: 46px;">Adicionar</button>
+                </div>
+                
+                <img src="assets/images/Logo.png" alt="logo" style="width: auto; height: 70px;">
             </form>
-
         </div>
     </main>
 
