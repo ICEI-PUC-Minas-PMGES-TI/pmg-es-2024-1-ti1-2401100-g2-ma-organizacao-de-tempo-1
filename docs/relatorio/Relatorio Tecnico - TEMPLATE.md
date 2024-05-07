@@ -130,12 +130,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 # Projeto de Interface
 
-......  COLOQUE AQUI O SEU TEXTO DE INTRODUÇÃO ......
-
-> Apresente as principais interfaces da solução. Discuta como 
-> foram elaboradas de forma a atender os requisitos funcionais, não
-> funcionais e histórias de usuário abordados nas [Especificações do
-> Projeto](#especificações-do-projeto).
+Nesta área do relatório serão apresentadas todo o Projeto de Interface, incluindo o User Flow e os Wireframes. Na interface, o objetivo é que a solução seja intuitiva, responsiva e leve, para que o máximo de usuários de diferentes dispositivos consigam usar o CronoFlex.
 
 ## User Flow
 
@@ -158,22 +153,33 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Wireframes
 
-......  INCLUA AQUI OS WIREFRAMES DAS TELAS DA APLICAÇÃO COM UM BREVE DESCRITIVO ......
+**Tela de Cadastro**:
 
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a
-> estrutura de um site web e seu relacionamentos entre suas
-> páginas. Um wireframe web é uma ilustração semelhante ao
-> layout de elementos fundamentais na interface.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> 
-> **Exemplo**:
-> 
-> ![Exemplo de Wireframe](images/wireframe-example.png)
+![Tela de Cadastro](images/tela-cadastro.png)
+
+**Tela de Login**:
+
+![Tela de Login](images/tela-login.png)
+
+**Tela de Apresentação**:
+
+![Tela de Apresentação](images/tela-apresentação.png)
+
+**Tela do Calendário**:
+
+![Tela de Calendário](images/tela-calendario.png)
+
+**Tela Informativa**:
+
+![Tela Informativa](images/tela-informativa.png)
+
+**Tela do Perfil**:
+
+![Tela do Perfil](images/tela-perfil.png)
+
+**Tela de Tarefas**:
+
+![Tela de Tarefas](images/tela-tarefas.png)
 
 
 # Metodologia
