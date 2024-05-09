@@ -7,7 +7,7 @@ Este projeto tem como objetivo fornecer funcionalidades de cadastro e edição d
 - Página de Edição e Exclusão de Dados, permitindo editar e excluir dados dos usuários cadastrados.
 - JavaScript para Manipulação de Dados:
 - formularios.js: Implementa a funcionalidade de cadastro.
-- dados.js: Implementa a funcionalidade de edição e exclusão de usuários.  
+- dados.js: Implementa a funcionalidade de edição e exclusão dos usuários.
 
 # Estrutura do projeto
 ├── index.html
