@@ -5,13 +5,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Definição da fonte personalizada */
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
 }
 
-/* Configurações do layout main */
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -31,27 +29,46 @@ main {
     width: 400px;
 }
 
+#form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 #Form {
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin: 10% auto;
     gap: 10px;
     align-items: flex-start;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #Form h1 {
     align-self: center;
-    margin-left: -16%;
+    margin-bottom: 20px;
 }
-#Form input,label, button{
+
+#Form label {
     margin-left: 10px;
 }
-input {
+
+#Form input {
     border-radius: 10px;
     padding: 6px;
     border: solid 1px;
-    width: 80%;
+    width: 90%;
+    margin-left: 10px;
+}
+
+#button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 button {
@@ -60,9 +77,27 @@ button {
     border: solid 2px #A1D298;
     background-color: #52A7C8;
     color: #FFFFFF;
-    width: 60%;
-    margin-left: 10%;
+    width: 70%;
+    cursor: pointer;
 }
+
+button:hover {
+    opacity: 0.9;
+}
+
+footer {
+    background-color: #78c5d6;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px 0;
+    position: relative;
+    margin-top: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
 
 @media (max-width: 600px) {
     main {
@@ -80,7 +115,16 @@ button {
         width: 350px;
     }
 
+    #form-container {
+        height: auto;
+    }
+
     #Form {
         width: 80%;
+    }
+
+    #button-container {
+        justify-content: flex-start;
+        margin-left: 10px;
     }
 }

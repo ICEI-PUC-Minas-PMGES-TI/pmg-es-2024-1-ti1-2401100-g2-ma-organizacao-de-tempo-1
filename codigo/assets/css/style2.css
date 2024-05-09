@@ -1,0 +1,136 @@
+*,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#cor {
+    height: 100%;
+    background: linear-gradient(to bottom, #f3d64e 0%, #78c5d6 50%, #008bba 100%);
+}
+
+#Imagem {
+    text-align: center;
+    margin-top: 20%;
+}
+
+#Logo {
+    width: 400px;
+}
+
+#dados-cadastro {
+    width: 70%;
+    margin: 4% auto;
+    background: #f9f9f9;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+ul li label {
+    font-weight: bold;
+}
+
+ul li input {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #d3d3d3;
+}
+
+ul li button {
+    margin-top: 5px;
+    padding: 8px 15px;
+    border: 2px solid #A1D298;
+    border-radius: 10px;
+    background-color: #52A7C8;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+ul li button:hover {
+    opacity: 0.9;
+}
+
+button#salvar,
+button#deletar,
+button#voltar {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 10px;
+    padding: 8px 15px;
+    border: 2px solid #A1D298;
+    border-radius: 10px;
+    background-color: #52A7C8;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+button#deletar {
+    background-color: #f44336;
+    border-color: #e57373;
+}
+
+button#voltar {
+    background-color: #6c757d;
+    border-color: #adb5bd;
+}
+
+button#salvar:hover,
+button#deletar:hover,
+button#voltar:hover {
+    opacity: 0.9;
+}
+
+footer {
+    background-color: #78c5d6;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px 0;
+    position: relative;
+    margin-top: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #cor {
+        height: 30vh;
+    }
+
+    #Imagem {
+        margin-top: 10px;
+        margin-left: 5px;
+        width: 350px;
+    }
+
+    #dados-cadastro {
+        width: 90%;  /* Ajustando para uma melhor visualização em dispositivos móveis */
+    }
+}
