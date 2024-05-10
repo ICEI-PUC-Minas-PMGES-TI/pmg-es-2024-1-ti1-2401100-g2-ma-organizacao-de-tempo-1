@@ -38,15 +38,12 @@ form{
     padding: 5px;
     border-radius: 10px;
     border-color: rgb(245, 205, 27);
+    text-decoration: none;
 }
 
-#inputs{
-    background-color: rgba(172,215,235,255);
-    border-radius: 10px;
-    border-color: rgb(245, 205, 27);
+#bordas{
+    border-color: rgba(255,229,0,255);
 }
-
-
 
 
 
