@@ -15,6 +15,13 @@ function adicionarTarefa(){
         alert("A data que voce digitou não pode ser usada. Tente Novamente!");
         form.reset();
     }
+
+    else if(tarefaInput.value.trim().length === 0 && inicioInput.value.trim().length === 0 && finalInput.value.trim().length === 0 && diarioInput.value.trim().length === 0 && mensalInput.value.trim().length === 0 && semanalInput.value.trim().length === 0) {
+        alert("Não foi digitado nenhum dado para salvar! Tente Novamente!");
+        form.reset();
+        return;
+    }    
+
     else{
         let tarefa = {
             id: obterID(),

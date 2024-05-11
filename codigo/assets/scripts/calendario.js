@@ -1,3 +1,71 @@
+//Codigo para gerar um calendario interiativo
+
+const nomeMes = document.querySelector("#mes-titulo");
+const datas = document.querySelector("#dates");
+const botoesMes = document.querySelectorAll("#mes-anterior, #mes-seguinte");
+
+const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro",];
+
+let dia = new Date();
+let mes = dia.getMonth();
+let ano = dia.getFullYear();
+
+function carregarCalendario(){
+    //Define o primo dia do mes, o ultimo do mes, qual o ultimo dia do mes e o ultimo dia do mes anterior
+    const primeiroDia = new Date(ano, mes, 1).getDay();
+    const ultimoDia = new Date(ano, mes + 1, 0).getDate();
+    const ultimo = new Date(ano, mes, ultimoDia).getDay();
+    const ultimoDiaMesAnterior = new Date(ano, mes, 0).getDate();
+    
+    //Criação dos dias do mes
+    let dias = '';
+
+    for(let i = primeiroDia; i > 0; i--){
+        dias = dias + `<li class="inactive" style="list-style-type: none;">${ultimoDiaMesAnterior - i + 1}</li>`;
+    }
+
+    for (let j = 1; j <= ultimoDia; j++){
+        let nomeId = j === dia.getDate && mes === new Date().getMonth() && ano == new Date().getFullYear() ? 'id="hoje"' : "";
+        dias = dias + `<li${nomeId} style="list-style-type: none;">${j}</li>`;
+    }
+
+    for (let i = ultimo; i < 6; i++){
+        dias = dias + `<li class="inactive" style="list-style-type: none;">${i - ultimo + 1}</li>`;
+    }
+
+    datas.innerHTML = dias;
+    nomeMes.textContent = `${meses[mes]} ${ano}`;
+}
+
+//Mudar os meses ao clicar o botao de voltar ou avançar, mudando tbm os dias
+botoesMes.forEach(nav => {
+    nav.addEventListener('click', clique => {
+        const botonId = clique.target.id;
+
+        if (botonId === "mes-anterior" && mes === 0){
+            ano--;
+            mes = 11;
+        } 
+        else if (botonId === "mes-seguinte" && mes === 11){
+            ano++;
+            mes = 0;
+        } 
+        else{
+            mes = (botonId === "mes-seguinte") ? mes + 1 : mes - 1;
+        }
+
+        dia = new Date(ano, mes, new Date().getDate());
+        ano = dia.getFullYear();
+        mes = dia.getMonth();
+
+        carregarCalendario();
+    });
+});
+
+carregarCalendario();
+
+//CRUD Tarefas
+
 const tbody = document.querySelector("tbody");
 
 function carregarTabela(id, nome) {
@@ -32,6 +100,8 @@ function criarBotao(rotulo) {
 
     botao.innerText = rotulo;
 
+    botao.classList.add("btn", "px-3", "border-3", "fs-5", "d-flex", "flex-wrap","align-items-center", "justify-content-center", "text-white");
+
     return botao; 
 }
 
@@ -41,9 +111,9 @@ function criarBotoesAcao() {
     const editarButton = criarBotao("Editar");
     const excluirButton = criarBotao("Excluir");
 
-    editarButton.addEventListener("click", (event) => {
+    editarButton.addEventListener("click", (e) => {
 
-        const linha = event.target.parentElement.parentElement;
+        const linha = e.target.parentElement.parentElement;
         const celulas = linha.childNodes;
         let id = parseInt(celulas[0].innerText);
         
@@ -52,9 +122,9 @@ function criarBotoesAcao() {
         window.location.href = "editar-tarefas.html";
     });
 
-    excluirButton.addEventListener("click", (event) => {
+    excluirButton.addEventListener("click", (e) => {
 
-        const linha = event.target.parentElement.parentElement;
+        const linha = e.target.parentElement.parentElement;
         excluir(linha);
 
     });

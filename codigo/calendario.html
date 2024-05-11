@@ -14,13 +14,13 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-evenly" style="width: 25%;"">
                   <li id="bordas" class="nav-item border border-3 border-warning rounded-pill px-3">
-                    <a class="nav-link text-white fw-bold" href="#">Início</a>
+                    <a class="nav-link text-white fw-bold" href="#" id="botao-inicio">Início</a>
                   </li>
                   <li id="bordas" class="nav-item border border-3 border-warning rounded-pill px-3">
-                    <a class="nav-link text-white fw-bold" href="#">Rotina</a>
+                    <a class="nav-link text-white fw-bold" href="#" id="botao-rotina">Rotina</a>
                   </li>
                   <li id="bordas" class="nav-item border border-3 border-warning rounded-pill px-3">
-                    <a class="nav-link text-white fw-bold" href="#">Dicas</a>
+                    <a class="nav-link text-white fw-bold" href="#" id="botao-dicas">Dicas</a>
                   </li>
                 </ul>
                 <form class="d-flex justify-content-between">
@@ -35,38 +35,49 @@
     <main>
       <div id="calendario" class="border-bottom">
         <div id="titulo-calendario" class="d-flex justify-content-between pt-2 border-bottom" style="width: 100%;">
-          <div id="mes-anterior" class="mx-5">
-            <button type="button" class="btn"><img src="assets/images/anterior.png" alt="botao anterior" style="height: 35px;"></button>
+          <div class="mx-5">
+            <button type="button" class="btn"><img id="mes-anterior" src="assets/images/anterior.png" alt="botao anterior" style="height: 35px;"></button>
           </div>
 
-          <div id="mes-titulo" class="d-flex align-items-end">
-            <p class="fs-3">Agosto 2024</p>
+          <div id="mes-titulo" class="d-flex align-items-center justify-content-between fs-3">
+              <h2></h2>
           </div>
 
-          <div id="mes-seguinte" class="mx-5">
-            <button type="button" class="btn"><img src="assets/images/proximo.png" alt="botao proximo" style="height: 35px;"></button>
+          <div class="mx-5">
+            <button type="button" class="btn"><img id="mes-seguinte" src="assets/images/proximo.png" alt="botao proximo" style="height: 35px;"></button>
           </div>
         </div>
-        
-        <div id="meses">
-            
-        </div>
+ 
+        <div id="datas">
+          <section class="pb-5">
+            <ul id="dias-semana" class="pt-3" style="list-style-type: none;">
+              <li>Dom</li>
+              <li>Seg</li>
+              <li>Ter</li>
+              <li>Qua</li>
+              <li>Qui</li>
+              <li>Sex</li>
+              <li>Sab</li>
+            </ul>
+            <ul id="dates">
 
+            </ul>
+          </section>
         </div>
       </div>
 
-      <div id="adicionar-tarefa" class="d-flex justify-content-center">
+      <div id="adicionar-tarefa" class="d-flex justify-content-center pt-4">
         <div id="botao-adicionar" class="d-flex justify-content-center" style="width: 500px;">
           <button id="botao-cadastrar" type="button" class="btn border-3 fs-5 d-flex align-items-center justify-content-center text-white" style="width: 500px;"><a style="text-decoration: none; color: white;" href="adicionar-tarefas.html">Cadastrar Tarefa</a></button>
         </div>
       </div>
 
-      <div id="tarefas">
-        <table>
+      <div id="tarefas" class="pt-3">
+        <table class="d-flex justify-content-center px-5">
           <thead>
-            <tr>
+            <tr class="d-flex justify-content-center px-5">
               <th>Id</th>
-              <th>Tarefa</th>
+              <th class="px-5">Tarefa</th>
               <th>Ação</th>
             </tr>
           </thead>

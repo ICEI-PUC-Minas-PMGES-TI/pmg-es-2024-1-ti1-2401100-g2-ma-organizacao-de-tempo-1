@@ -16,6 +16,20 @@ header{
     background-color: rgba(113,201,236,255);
 }
 
+#bordas{
+    transition: all .3s;
+}
+
+#bordas:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#bordas:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
 #main{
     padding-bottom: 300px;
 }
@@ -28,21 +42,39 @@ form{
     background-color: rgba(113,201,236,255);
     color: white;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 10rem;
     border-color: rgb(245, 205, 27);
+    transition: all .3s;
 }
 
 #botao-cancelar{
     background-color: rgba(113,201,236,255);
     color: white;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 10rem;
     border-color: rgb(245, 205, 27);
     text-decoration: none;
+    transition: all .3s;
 }
 
-#bordas{
-    border-color: rgba(255,229,0,255);
+#botao-adicionar:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#botao-adicionar:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#botao-cancelar:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#botao-cancelar:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 
