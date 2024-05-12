@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #BBE8F2;
+    padding: 20px;
+}
+
+.container {
+    background-color: #94D7F2;
+    padding: 40px;
+    border-radius: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header button {
+    background-color: rgb(243, 49, 49);
+    border-color: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    align-items: end;
+    text-align: end;
+    margin-left: 100%;
+}
+
+header h2 {
+    margin-bottom: 20px;
+    color: rgb(55, 55, 55);
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-grupo label {
+    display: block;
+}
+
+.form-grupo input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.form-grupo button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Adicionando media queries para tornar o layout responsivo */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
