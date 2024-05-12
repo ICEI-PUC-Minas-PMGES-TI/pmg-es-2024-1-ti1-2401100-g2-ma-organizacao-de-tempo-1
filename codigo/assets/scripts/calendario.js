@@ -76,6 +76,7 @@ function carregarTabela(id, nome) {
 
         let tr = document.createElement("tr");
         tr.id = `tarefa-${tarefa.id}`;
+        tr.classList.add("tarefa");
 
         const celulas = ['id', 'nome'];
 
@@ -101,18 +102,20 @@ function criarBotao(rotulo) {
     botao.innerText = rotulo;
 
     botao.classList.add("btn", "px-3", "border-3", "fs-5", "d-flex", "flex-wrap","align-items-center", "justify-content-center", "text-white");
+    
 
     return botao; 
 }
 
 function criarBotoesAcao() {
     const td = document.createElement("td");
+    td.setAttribute("id", "botoes-crud");
 
     const editarButton = criarBotao("Editar");
     const excluirButton = criarBotao("Excluir");
+    const visualizarBoton = criarBotao("Visualizar")
 
     editarButton.addEventListener("click", (e) => {
-
         const linha = e.target.parentElement.parentElement;
         const celulas = linha.childNodes;
         let id = parseInt(celulas[0].innerText);
@@ -123,14 +126,24 @@ function criarBotoesAcao() {
     });
 
     excluirButton.addEventListener("click", (e) => {
-
         const linha = e.target.parentElement.parentElement;
         excluir(linha);
-
     });
+
+    visualizarBoton.addEventListener("click", (e) =>{
+        const linha = e.target.parentElement.parentElement;
+        const celulas = linha.childNodes;
+        let id = parseInt(celulas[0].innerText);
+
+        sessionStorage.setItem("id", id);
+
+        window.location.href = "visualizar-tarefas.html";
+    });
+    
 
     td.appendChild(editarButton);
     td.appendChild(excluirButton);
+    td.appendChild(visualizarBoton);
 
     return td;
 }
