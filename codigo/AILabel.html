@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Assistente Virtual</title>
-        <link rel="stylesheet" href="./assets/css/style.css">
-    </head>
-    <body id="MainContent">
-        <div id="CronoAI">
-            <button></button>
-            <img src="/codigo/assets/images/crono.png" alt="Crono" width="128px" height="128px">
-        </div>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assistente Virtual</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <header>
+    <img id="CronoLogo" src="./assets/images/Logo.png" alt="Crono Logo" />
+  </header>
+  <body>
+    <div id="CronoSee">
+      <button id="botaoPopup" onclick="changeContent()">
+        <img id="Crono" src="./assets/images/crono.png" alt="Crono" />
+      </button>
+      <div id="CronoContent">
+        <p id="Content">
+          Olá, eu sou Crono, seu Assistente Virtual do site Cronoflex
+        </p>
+      </div>
+    </div>
+    <script src="./assets/scripts/script.js"></script>
+  </body>
 </html>

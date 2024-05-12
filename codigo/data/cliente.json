@@ -1,9 +1,0 @@
-{
-  "id": 1,
-  "nome": "Cliente 01",
-  "nascimento": "2000-01-01",
-  "email": "clienteo@gmail.com",
-  "idade": "24",
-  "telefone": "31999999999",
-  "senha": "12345678"
-}
