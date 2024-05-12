@@ -35,6 +35,8 @@ function createButton() {
     button.id = "SeeChores";
     button.innerHTML = "Ver Tarefas";
     button.onclick = function () {
+      const content = document.getElementById("Content");
+      content.innerText = "Tarefas";
       JsonCliente.tarefas.forEach(tarefa => {
         const listItem = document.createElement('li');
         listItem.textContent = tarefa;

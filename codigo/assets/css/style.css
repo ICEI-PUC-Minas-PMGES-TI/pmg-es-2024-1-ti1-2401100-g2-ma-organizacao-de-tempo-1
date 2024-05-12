@@ -49,7 +49,7 @@ header img {
 }
 
 #CronoContent{
-  width: 400px;
+  width: 100%;
   height: 160px;
   display: flexbox;
   justify-content: center;
@@ -57,11 +57,11 @@ header img {
   border-radius: 120px;
   align-content: center;
   padding: auto;
+  box-sizing: border-box;
 }
 
 #Content{
   margin-left: 25px;
-  
 }
 
 #PopUp {
