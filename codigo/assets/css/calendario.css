@@ -17,15 +17,28 @@ header{
 }
 
 #calendario{
-    min-width: 400px;
+    width: 100%;
 }
 
-#dias-semana{
+
+#datas{
+    margin: auto;
+    width: 98%;
+    max-width: 380px;
+}
+
+#datas ul{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#dates {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
-    margin: 0px 500px;
+    margin: 0;
 }
+  
 
 #dates li.inactive{
     color: #c2c1c1b6;
@@ -45,24 +58,21 @@ header{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-#dates{
-    margin: 0px 500px;
-}
-
-#datas ul{
+#datas ul li{
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
-}
-
-#datas ul li{
+    justify-content: center;
     width: calc(100% / 7);
     margin-top: 25px;
     position: relative;
     z-index: 2;
 }
 
-
+#dates ul{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
 
 .btn{
     display: flex;
@@ -128,6 +138,9 @@ header{
 }
 
 #tarefas td{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 5px;
 }
 
@@ -142,8 +155,9 @@ header{
 }
 
 .tarefa{
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
@@ -158,3 +172,18 @@ header{
     transition: all .3s;
     width: 110px;
 }
+
+#botao-adicionar {
+    max-width: 90%; 
+}
+  
+#botao-cadastrar {
+    width: 90%; 
+}
+  
+@media screen and (max-width: 600px) {
+#botao-cadastrar {
+    font-size: 14px; 
+}
+}
+  

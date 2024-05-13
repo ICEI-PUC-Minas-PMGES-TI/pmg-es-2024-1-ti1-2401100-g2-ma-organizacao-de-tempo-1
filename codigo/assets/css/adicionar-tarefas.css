@@ -78,5 +78,25 @@ form{
 }
 
 
-
-
+@media screen and (max-width: 930px) {
+    input[type="text"],
+    input[type="datetime-local"],
+    input[type="radio"] {
+      max-width: 100%; 
+    }
+  
+    
+    #botoes {
+        max-width: 100%;
+        flex-direction: column; 
+    }
+  
+    #botoes button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%; 
+        margin-bottom: 10px;
+    }
+}
