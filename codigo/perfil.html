@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-evenly" style="width: 25%;"">
                   <li id=" bordas" class="nav-item border border-3 border-warning rounded-pill px-3">
-            <a class="nav-link text-white fw-bold" href="#">Início</a>
+              <a class="nav-link text-white fw-bold" href="#">Início</a>
             </li>
             <li id="bordas" class="nav-item border border-3 border-warning rounded-pill px-3">
               <a class="nav-link text-white fw-bold" href="#">Rotina</a>
@@ -35,50 +35,49 @@
   </header>
 
   <main>
-    <div class="imagemperfil">
-      <img class="imagemdeperfil" src="assets/images/perfil-de-usuario.png" alt="" width="300px">
+    <div class="profile-container">
+      <div class="imagemperfil">
+        <img class="imagemdeperfil" src="assets/images/perfil-de-usuario.png" alt="" width="200px">
+      </div>
+      <div id="perfil">
+        <p class="infos"><strong>Nome:</strong> <span id="PerfilNome"></span></p>
+        <p class="infos"><strong>Email:</strong> <span id="PerfilEmail"></span></p>
+        <p class="infos"><strong>Idade:</strong> <span id="PerfilIdade"></span></p>
+        <p class="infos"><strong>Telefone:</strong> <span id="PerfilTelefone"></span></p>
+        <p class="infos"><strong>Data de Nascimento:</strong> <span id="PerfilDataDeNascimento"></span></p>
+        <button id="editarPerfilBtn" class="btn btn-primary">Editar Perfil</button>
+      </div>
     </div>
-    <div id="perfil">
-      <p class="infos"><strong>Nome:</strong> <span id="PerfilNome"></span></p>
-      <p class="infos"><strong>Email:</strong> <span id="PerfilEmail"></span></p>
-      <p class="infos"><strong>Idade:</strong> <span id="PerfilIdade"></span></p>
-      <p class="infos"><strong>Telefone:</strong> <span id="PerfilTelefone"></span></p>
-      <p class="infos"><strong>Data de Nascimento:</strong> <span id="PerfilDataDeNascimento"></span></p>
-    </div>
-    </div>
-    <form id="formAlterarDados">
-      <label for="nome">teste</label>
-      
-      
-      <div class="label-float">
-        <input id="testeInput" class="inputForm" type="text" />
-        <label>Título</label>
-      </div>
-      <div class="label-float">
-        <input class="inputForm" type="text" />
-        <label>nome</label>
-      </div>
-      <div class="label-float">
-        <input class="inputForm" type="text" />
-        <label>endereço</label>
-      </div>
-      <div class="label-float">
-        <input class="inputForm" type="text" />
-        <label>telefone</label>
-      </div>
-      <div class="label-float">
-        <input class="inputForm" type="text" />
-        <label>Título</label>
-      </div>
-      
-      <button class="submit-button" type="submit">Alterar</button>
 
-    </form>
+    <div class="editarperfil">
+      <form id="formAlterarDados">
+        <div class="label-float">
+          <input autocomplete="off" id="inputName" class="inputForm" type="text" />
+          <label>Nome:</label>
+        </div>
+        <div class="label-float">
+          <input autocomplete="off" id="inputEmail" class="inputForm" type="text" />
+          <label>Email:</label>
+        </div>
+        <div class="label-float">
+          <input autocomplete="off" id="inputIdade" class="inputForm" type="text" />
+          <label>Idade:</label>
+        </div>
+        <div class="label-float">
+          <input autocomplete="off" id="inputTelefone" class="inputForm" type="text" />
+          <label>Telefone:</label>
+        </div>
+        <div class="label-float">
+          <input autocomplete="off" id="inputData" class="inputForm" type="text" />
+          <label>Data de Nascimento:</label>
+        </div>
+        <button class="submit-button" type="submit">Salvar Alterações </button>
+      </form>
+    </div>
+
   </main>
-  <script src="../codigo/assets/scripts/perfil.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+  <script src="assets/scripts/perfil.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
