@@ -26,7 +26,7 @@ function carregarCalendario(){
 
     for (let j = 1; j <= ultimoDia; j++){
         let nomeId = j === dia.getDate && mes === new Date().getMonth() && ano == new Date().getFullYear() ? 'id="hoje"' : "";
-        dias = dias + `<li${nomeId} style="list-style-type: none;">${j}</li>`;
+        dias = dias + `<li${nomeId} id="dia" style="list-style-type: none;" data-date="${ano}-${mes + 1}-${j}">${j}</li>`;
     }
 
     for (let i = ultimo; i < 6; i++){
@@ -35,6 +35,23 @@ function carregarCalendario(){
 
     datas.innerHTML = dias;
     nomeMes.textContent = `${meses[mes]} ${ano}`;
+
+    document.querySelectorAll("#dia").forEach(day => {
+        day.addEventListener("mouseover", (e) => {
+            e.currentTarget.style.transform = "translateY(-5px)";
+            e.currentTarget.style.boxShadow = "0 4px 8px rgba(0,0,0,0.2)";
+        });
+
+        day.addEventListener("mouseout", (e) => {
+            e.currentTarget.style.transform = "translateY(0)";
+            e.currentTarget.style.boxShadow = "none";
+        });
+
+        day.addEventListener("click", (e) => {
+            const dataSelecionada = e.currentTarget.getAttribute("data-date");
+            window.location.href = `adicionar-tarefas.html?date=${dataSelecionada}`;
+        });
+    });
 }
 
 //Mudar os meses ao clicar o botao de voltar ou avançar, mudando tbm os dias

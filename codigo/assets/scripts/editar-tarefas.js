@@ -8,6 +8,10 @@ const finalInput = document.querySelector("#final");
 const diarioInput = document.querySelector("#diaria");
 const semanalInput = document.querySelector("#semanal");
 const mensalInput = document.querySelector("#mensal");
+const dataInput = document.querySelector("#data");
+const baixaInput = document.querySelector("#baixa");
+const mediaInput = document.querySelector("#media");
+const altaInput = document.querySelector("#alta");
 
 function carregarDados(){
     const id = sessionStorage.getItem("id");
@@ -19,9 +23,11 @@ function carregarDados(){
     });
 
     tarefaInput.value = tarefa.nome;
+    dataInput.value = tarefa.data;
     inicioInput.value = tarefa.inicioTarefa;
     finalInput.value = tarefa.finalTarefa;
     diarioInput.value || semanalInput.value || mensalInput.value == tarefa.frequencia;
+    baixaInput.value || mediaInput.value || altaInput.value == tarefa.prioridade;
 }
 
 function buscarTarefa(id) {
@@ -34,14 +40,16 @@ function buscarTarefa(id) {
 
 function atualizarTarefa(){
     tarefa.nome = tarefaInput.value.trim();
+    tarefa.data = dataInput.value.trim();
     tarefa.inicioTarefa = inicioInput.value.trim();
     tarefa.finalTarefa = finalInput.value.trim();
     tarefa.frequencia = diarioInput.value.trim() || semanalInput.value.trim() || mensalInput.value.trim();
-    const dataInicio = new Date(tarefa.inicioTarefa);
-    const dataFinal = new Date(tarefa.finalTarefa);
+    tarefa.prioridade = baixaInput.value.trim() || mediaInput.value.trim() || altaInput.value.trim();
+    const horaInicio = tarefa.inicioTarefa;
+    const horaFinal = tarefa.finalTarefa;
 
-    if(dataInicio > dataFinal){
-        alert("A data que voce digitou não pode ser usada. Tente Novamente!");
+    if(horaInicio > horaFinal){
+        alert("A hora que voce digitou não pode ser usada. Tente Novamente!");
         form.reset();
     }
     else{

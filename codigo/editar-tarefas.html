@@ -37,10 +37,12 @@
             <form action="" class="d-flex flex-column justify-content-center align-items-center border border-3 rounded p-3 border-warning" style="width: 35%; ">
                 <label for="tarefa" class="p-1 fw-bold fs-2">Tarefa</label>
                 <input type="text" name="tarefa" id="tarefa" style="width: 298px; height: 46px; background-color: rgba(172,215,235,255); border-radius: 10px; border-color: rgba(255,229,0,255)" class="px-3 border-3" required>
+                <label for="data" class="p-1 fw-bold fs-2">Data</label>
+                <input type="date" name="data" id="data" style="width: 298px; height: 46px; background-color: rgba(172,215,235,255); border-radius: 10px; border-color: rgba(255,229,0,255)" class="px-3 border-3" required>
                 <label for="inicio" class="fw-bold p-1 fs-2">Início</label>
-                <input type="datetime-local" name="inicio" id="inicio" style="width: 298px; height: 46px; background-color: rgba(172,215,235,255); border-radius: 10px; border-color: rgba(255,229,0,255)" class="px-3 border-3" required>
+                <input type="time" name="inicio" id="inicio" style="width: 298px; height: 46px; background-color: rgba(172,215,235,255); border-radius: 10px; border-color: rgba(255,229,0,255)" class="px-3 border-3" required>
                 <label for="final" class="fw-bold p-1 fs-2">Fim</label>
-                <input type="datetime-local" name="final" id="final" style="width: 298px; height: 46px; background-color: rgba(172,215,235,255); border-radius: 10px; border-color: rgba(255,229,0,255)" class="px-3 border-3" required>
+                <input type="time" name="final" id="final" style="width: 298px; height: 46px; background-color: rgba(172,215,235,255); border-radius: 10px; border-color: rgba(255,229,0,255)" class="px-3 border-3" required>
                 <label for="frequencia" class="fw-bold p-1 fs-2">Frequência</label>
                 <div class="frequencia d-flex flex-wrap pb-2">
                     <input type="radio" name="frequencia" id="diaria" value="diaria">
@@ -49,6 +51,15 @@
                     <label for="semanal" class="px-2 fw-bold fs-5">Semanal</label>
                     <input type="radio" name="frequencia" id="mensal" value="mensal" required>
                     <label for="mensal" class="px-2 fw-bold fs-5">Mensal</label>
+                </div>
+                <label for="prioridade" class="fw-bold p-1 fs-2">Prioridade</label>
+                <div class="prioridade d-flex flex-wrap pb-2">
+                  <input type="radio" name="prioridade" id="baixa" value="baixa">
+                  <label for="baixa" class="px-2 fw-bold fs-5" >Baixa</label>
+                  <input type="radio" name="prioridade" id="media" value="media" class="px-1">
+                  <label for="media" class="px-2 fw-bold fs-5">Média</label>
+                  <input type="radio" name="prioridade" id="alta" value="alta">
+                  <label for="alta" class="px-2 fw-bold fs-5">Alta</label>
                 </div>
                 <div id="botoes" class="d-flex justify-content-between" style="width: 300px;">
                     <button id="botao-cancelar" type="button" class="btn border-3 fs-5 d-flex align-items-center justify-content-center " style="width: 147px; height: 46px;"><a style="text-decoration: none; color:white" href="calendario.html">Cancelar</a></button>
