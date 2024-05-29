@@ -29,3 +29,36 @@ header{
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+
+main h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.saldocoins {
+    border: 1.5px solid black;
+    border-radius: 20px;
+    height: 50px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.cronocoin {
+    align-items: center;
+    margin-bottom: 6px;
+    justify-content: center;
+    display: flex;
+}
+
+h2 {
+    width: 38px;
+    height: 388px;
+}
+footer {
+    width: 232px;
+}
