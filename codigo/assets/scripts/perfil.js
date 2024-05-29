@@ -7,7 +7,6 @@ const cliente = {
   idade: "24",
   telefone: "31999999999",
   senha: "12345678",
-  tarefas: ["Estudar - 20:30", "Dormir - 22:30"],
 };
 
 document.addEventListener("DOMContentLoaded", function() {
