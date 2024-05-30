@@ -14,6 +14,11 @@ header{
 .buttonsheader {
     display: flex;
     justify-content: space-between;
+    
+}
+
+li {
+    margin-right: 20px;
 }
 
 #bordas{
@@ -34,6 +39,8 @@ main h1 {
     font-size: 20px;
     text-align: center;
     margin-top: 4%;
+    height: 80%;
+    font-weight: bold;
 }
 
 .saldocoins {
@@ -60,5 +67,20 @@ h2 {
     height: 388px;
 }
 footer {
-    width: 232px;
+    align-items: center;
+    text-align: center;
+    margin-top: 180px;
+}
+
+p1 {
+    color: #353636;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.passos {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
 }
