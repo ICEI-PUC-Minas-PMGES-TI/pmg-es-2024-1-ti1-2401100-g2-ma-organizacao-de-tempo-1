@@ -38,31 +38,40 @@ document.addEventListener('DOMContentLoaded', function() {
         const item = data[index];
         
         // Preenche o formulário com os dados para edição
-        document.getElementById('nome').value = item.nome;
-        document.getElementById('email').value = item.email;
-        document.getElementById('assunto').value = item.assunto;
-        document.getElementById('menssagem').value = item.menssagem;
+        document.getElementById('edit-nome').value = item.nome;
+        document.getElementById('edit-email').value = item.email;
+        document.getElementById('edit-assunto').value = item.assunto;
+        document.getElementById('edit-mensagem').value = item.menssagem;
         
+        // Mostra o formulário de edição
+        document.getElementById('edit-form-container').style.display = 'block';
+
         // Atualiza os dados ao salvar
         document.getElementById('save').onclick = function() {
             data[index] = {
-                nome: document.getElementById('nome').value,
-                email: document.getElementById('email').value,
-                assunto: document.getElementById('assunto').value,
-                menssagem: document.getElementById('menssagem').value,
+                nome: document.getElementById('edit-nome').value,
+                email: document.getElementById('edit-email').value,
+                assunto: document.getElementById('edit-assunto').value,
+                menssagem: document.getElementById('edit-mensagem').value,
             };
             localStorage.setItem('formData', JSON.stringify(data));
             loadData();
             clearForm();
+            document.getElementById('edit-form-container').style.display = 'none'; // Esconde o formulário de edição após salvar
         }
     }
 
     // Função para limpar o formulário
     function clearForm() {
-        document.getElementById('nome').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('assunto').value = '';
-        document.getElementById('menssagem').value = '';
+        document.getElementById('edit-nome').value = '';
+        document.getElementById('edit-email').value = '';
+        document.getElementById('edit-assunto').value = '';
+        document.getElementById('edit-mensagem').value = '';
+    }
+
+    // Redireciona para a página de adição de novo item
+    document.getElementById('add-new').onclick = function() {
+        window.location.href = 'cadastro_contato.html'; // Substitua 'add.html' pelo caminho correto para a página de adição de novo item
     }
 
     // Carrega os dados ao carregar a página
