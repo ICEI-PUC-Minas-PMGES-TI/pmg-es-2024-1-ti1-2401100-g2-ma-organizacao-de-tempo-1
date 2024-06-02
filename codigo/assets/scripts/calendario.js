@@ -3,6 +3,11 @@
 const nomeMes = document.querySelector("#mes-titulo");
 const datas = document.querySelector("#dates");
 const botoesMes = document.querySelectorAll("#mes-anterior, #mes-seguinte");
+const prioridade = document.querySelector("#prio");
+const frequencia_diaria = document.querySelector("#freq_diaria");
+const frequencia_semanal = document.querySelector("#freq_semanal");
+const frequencia_mensal = document.querySelector("#freq_mensal");
+const limpar = document.querySelector("#limpar");
 
 const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro",];
 
@@ -26,7 +31,7 @@ function carregarCalendario(){
 
     for (let j = 1; j <= ultimoDia; j++){
         let nomeId = j === dia.getDate && mes === new Date().getMonth() && ano == new Date().getFullYear() ? 'id="hoje"' : "";
-        dias = dias + `<li${nomeId} id="dia" style="list-style-type: none;" data-date="${ano}-${mes + 1}-${j}">${j}</li>`;
+        dias = dias + `<li${nomeId} id="dia" style="list-style-type: none;" data-date="${j}/${mes + 1}/${ano}">${j}</li>`;
     }
 
     for (let i = ultimo; i < 6; i++){
@@ -38,8 +43,15 @@ function carregarCalendario(){
 
     document.querySelectorAll("#dia").forEach(day => {
         day.addEventListener("mouseover", (e) => {
-            e.currentTarget.style.transform = "translateY(-5px)";
-            e.currentTarget.style.boxShadow = "0 4px 8px rgba(0,0,0,0.2)";
+            e.currentTarget.style.transform = "translateY(-3px)";
+            e.currentTarget.style.boxShadow = "0 10px 20px rgba(0,0,0,0.1)";
+            e.currentTarget.style.cursor = "pointer";
+        });
+
+        day.addEventListener("active", (e) => {
+            e.currentTarget.style.transform = "translateY(-1px)";
+            e.currentTarget.style.boxShadow = "0 5px 10px rgba(0,0,0,0.2)";
+            e.currentTarget.style.cursor = "pointer";
         });
 
         day.addEventListener("mouseout", (e) => {
@@ -86,7 +98,22 @@ carregarCalendario();
 const tbody = document.querySelector("tbody");
 
 function carregarTabela(id, nome) {
+    tbody.innerHTML = '';
     let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+
+    //filtro das tarefas
+    let filtroSelecionado = document.querySelector('input[name="filtro"]:checked');
+    if (filtroSelecionado) {
+        if (filtroSelecionado.id === "prio") {
+            tarefas = tarefas.filter(tarefa => tarefa.prioridade === "alta");
+        } else if (filtroSelecionado.id === "freq_diaria") {
+            tarefas = tarefas.filter(tarefa => tarefa.frequencia === "diaria");
+        } else if (filtroSelecionado.id === "freq_semanal") {
+            tarefas = tarefas.filter(tarefa => tarefa.frequencia === "semanal");
+        } else if (filtroSelecionado.id === "freq_mensal") {
+            tarefas = tarefas.filter(tarefa => tarefa.frequencia === "mensal");
+        }
+    }
 
     for (let i = 0; i < tarefas.length; i++) {
         const tarefa = tarefas[i];
@@ -120,7 +147,6 @@ function criarBotao(rotulo) {
 
     botao.classList.add("btn", "px-3", "border-3", "fs-5", "d-flex", "flex-wrap","align-items-center", "justify-content-center", "text-white");
     
-
     return botao; 
 }
 
@@ -193,6 +219,21 @@ function buscarTarefa(id, tarefas) {
     return -1;
 }
 
+const filtros = [prioridade, frequencia_diaria, frequencia_semanal, frequencia_mensal];
+filtros.forEach(filtro => {
+    filtro.addEventListener('change', () => {
+        carregarTabela();
+    });
+});
+
+limpar.addEventListener('click', () => {
+    let filtroSelecionado = document.querySelector('input[name="filtro"]:checked');
+    if (filtroSelecionado) filtroSelecionado.checked = false;
+    carregarTabela();
+});
+
+
 window.addEventListener("load", () => {
+    alert("Para cadastrar uma tarefa, clique no dia que deseja cadastrar");
     carregarTabela();
 });
