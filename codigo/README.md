@@ -1,5 +1,1 @@
-# Código do Projeto
-
-Mantenha neste diretório todo o código fonte do projeto. 
-
-Se necessário, descreva neste arquivo aspectos relevantes da estrutura de diretórios criada para organização do código.
+Os valores de Cronocoins devem ser inseridos de forma manual dentro do arquivo java script, afim de apenas testar a funcionalidade, a funcionalidade poderá ser vista de forma total e completa apenas após a integraçao total na sprint 4. Obrigado :)
