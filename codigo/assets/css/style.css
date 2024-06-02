@@ -7,7 +7,7 @@
 
 header{
     height: 78px;
-    width: 1440px;
+    width: 100%;
     background-color: #71C9EC;
 }
  
@@ -36,7 +36,7 @@ li {
 }
 
 main h1 {
-    font-size: 20px;
+    font-size: 2em;
     text-align: center;
     margin-top: 4%;
     height: 80%;
@@ -47,7 +47,7 @@ main h1 {
     border: 1.5px solid black;
     border-radius: 20px;
     height: 50px;
-    width: 500px;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,12 +75,30 @@ footer {
 p1 {
     color: #353636;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 2em;
 
 }
 
 .passos {
-    font-size: 20px;
+    font-size: 1.5em;
     margin-top: 20px;
     text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .navbar-nav li {
+    margin-bottom: 10px;
+  }
+
+  main h1, p1, .passos {
+    font-size: 1.5em;
+  }
+
+  .navbar .navbar-toggler {
+    display: none;
+  }
 }
