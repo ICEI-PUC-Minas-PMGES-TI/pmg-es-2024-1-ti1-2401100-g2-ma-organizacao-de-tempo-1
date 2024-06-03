@@ -70,6 +70,11 @@ h2{
     margin-right: 10px;
 }
 
+.boxnotificacao p{
+    position: relative;
+    top: 8px;
+}
+
 .horariotarefa {
     margin-left: auto;
     font-size: 0.9em;
