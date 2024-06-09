@@ -154,6 +154,12 @@ header{
     padding: 5px;
 }
 
+.tarefa.concluida td {
+    text-decoration: line-through;
+    color: #888;
+}
+
+
 #tarefas tr{
     display: flex;
     justify-content: space-evenly;

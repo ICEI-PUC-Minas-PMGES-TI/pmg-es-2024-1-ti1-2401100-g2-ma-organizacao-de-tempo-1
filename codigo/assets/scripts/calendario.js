@@ -156,7 +156,8 @@ function criarBotoesAcao() {
 
     const editarButton = criarBotao("Editar");
     const excluirButton = criarBotao("Excluir");
-    const visualizarBoton = criarBotao("Visualizar")
+    const visualizarBoton = criarBotao("Visualizar");
+    const concluidoBoton = criarBotao("Concluir");
 
     editarButton.addEventListener("click", (e) => {
         const linha = e.target.parentElement.parentElement;
@@ -182,11 +183,16 @@ function criarBotoesAcao() {
 
         window.location.href = "visualizar-tarefas.html";
     });
-    
+
+    concluidoBoton.addEventListener("click", (e) => {
+        const linha = e.target.parentElement.parentElement;
+        concluirTarefa(linha);
+    });
 
     td.appendChild(editarButton);
     td.appendChild(excluirButton);
     td.appendChild(visualizarBoton);
+    td.appendChild(concluidoBoton);
 
     return td;
 }
@@ -210,6 +216,23 @@ function excluir(linha) {
         linha.remove();
     }
 }
+
+function concluirTarefa(linha) {
+    const celulas = linha.childNodes;
+    let idTarefa = parseInt(celulas[0].innerText);
+    let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+    let indiceTarefa = buscarTarefa(idTarefa, tarefas);
+  
+    tarefas[indiceTarefa].concluida = !tarefas[indiceTarefa].concluida;
+  
+    localStorage.setItem("tarefas", JSON.stringify(tarefas));
+  
+    if (tarefas[indiceTarefa].concluida) {
+      linha.classList.add("concluida");
+    } else {
+      linha.classList.remove("concluida");
+    }
+  }
 
 function buscarTarefa(id, tarefas) {
     for (let i = 0; i < tarefas.length; i++) {  
