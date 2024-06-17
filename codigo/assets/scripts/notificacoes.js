@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function(){
     const tarefasJson = [
-        { "nome": "atividades", "dia": "hoje", "resultado": "pendente", "horario": "20:00"},
-        { "nome": "estudar", "dia": "hoje", "resultado": "concluiu", "horario": "17:00"},
-        { "nome": "trabalhar", "dia": "hoje", "resultado": "não concluiu", "horario": "12:00" },
-        { "nome": "cochilar", "dia": "ontem", "resultado": "não concluiu", "horario": "16:00" },
-        { "nome": "pesquisa", "dia": "ontem", "resultado": "não concluiu", "horario": "10:00" },
-        { "nome": "atividades", "dia": "ontem", "resultado": "concluiu", "horario": "09:00" }
+        { "id": 1, "nome": "atividades", "dia": "hoje", "resultado": "pendente", "horario": "20:00", "concluida": false},
+        { "id": 2, "nome": "estudar", "dia": "hoje", "resultado": "concluiu", "horario": "17:00", "concluida": true},
+        { "id": 3, "nome": "trabalhar", "dia": "hoje", "resultado": "não concluiu", "horario": "12:00", "concluida": false },
+        { "id": 4, "nome": "cochilar", "dia": "ontem", "resultado": "não concluiu", "horario": "16:00", "concluida": false },
+        { "id": 5, "nome": "pesquisa", "dia": "ontem", "resultado": "não concluiu", "horario": "10:00", "concluida": false },
+        { "id": 6, "nome": "atividades", "dia": "ontem", "resultado": "concluiu", "horario": "09:00", "concluida": true }
     ]
 
 if(!localStorage.getItem('tarefas')){
@@ -20,7 +20,6 @@ gerarNotificacoes(tarefas);
 function gerarNotificacoes(tarefas){
     const hoje = new Date();
     const ontem = new Date();
-    
     ontem.setDate(hoje.getDate() - 1);
 
     tarefas.forEach(tarefa => {
@@ -78,4 +77,21 @@ function gerarNotificacoes(tarefas){
             document.getElementById('noutros').appendChild(divdata);
         }
     });
+}
+
+function concluirtarefa(linha){
+    const celulas = linha.childNodes;
+    let idTarefa = parseInt(celulas[0].innerText);
+    let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+    let indiceTarefa = buscarTarefa(idTarefa, tarefas);
+
+    tarefas[indiceTarefa].concluida = !tarefas[indiceTarefa].concluida;
+    tarefas[indiceTarefa].resultado = tarefas[indiceTarefa].concluida ? 'concluiu' : 'não concluiu';
+
+    localStorage.setItem("tarefas", JSON.stringify(tarefas));
+    window.location.reload();
+}
+
+function buscarTarefa(id, tarefas){
+    return tarefas.findIndex(tarefa => tarefa.id === id);
 }
