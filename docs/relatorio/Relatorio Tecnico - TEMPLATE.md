@@ -55,11 +55,11 @@ Os membros do grupo são:
 
 ## Problema
 
-O problema a ser resolvido é o de Má Organização de Tempo, que é causado por diversos motivos como, procastinação, falta de planejamento, desorganização, entre outros. O contexto da aplicação é pessoal, sendo mais utilizado para organização pessoal. 
+O problema a ser resolvido é o de Má Organização de Tempo, que é causado por diversos motivos como: procastinação, falta de planejamento, desorganização, entre outros. O contexto da aplicação é pessoal, sendo mais utilizado para organização pessoal. 
 
 ## Objetivos
 
-O objetivo do projeto é desenvolver um software para solucionar a má organização de tempo. Dessa forma, o software tem propósito de incentivar o usuário a melhorar sua organização através de recompensas dentro da aplicação e um assistente que auxilie o usuário.
+O objetivo do projeto é desenvolver um software para solucionar a má organização de tempo através da possibilidade do usuário cadastrar, listar e verificar quais as tarefas que tem naquele periodo de tempo, tendo também a possibilidade de ver pequenos informativos sobre sua propria organização e maneiraas de executar tal tarefa eficientemente. Dessa forma, o software serve como um gerenciador de tarefas para o mesmo ter mais controle sobre seu tempo.
 
 ## Justificativa
 
@@ -67,11 +67,15 @@ A importância de trabalhar com esta aplicação é a forma que o serviço facil
 
 ## Público-Alvo
 
-O público-alvo é principalmente para aqueles que possuem dificuldade de organizar o seu tempo, dentre estudantes, autônomos, estagiários, professores, desenvolvedores e outros. 
+O público-alvo é principalmente para aqueles que possuem dificuldade de organizar o seu tempo, sendo principalmente estudantes, autônomos, estagiários, professores, desenvolvedores e outros. 
  
 # Especificações do Projeto
 
-Agora serão especificados as personas e mapas de empatia (produzidas através do Miro), histórias de usuários, requisitos e restrições do projeto, pensadas no processo de Design Thinking.   
+Stakeholders:
+- Fundamentais: Desenvolvedores, estudantes e prestadores de serviço.
+- Importantes: Neuro divergentes e autonomos.
+- Influenciadores: professores e outros aplicativos de gerenciamento.
+  
 
 ## Personas e Mapas de Empatia
 
