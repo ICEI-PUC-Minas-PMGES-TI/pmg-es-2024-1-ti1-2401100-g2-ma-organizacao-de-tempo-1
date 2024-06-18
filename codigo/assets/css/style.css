@@ -1,86 +1,77 @@
-*,
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flexbox;
 }
 
-/* Definição da fonte personalizada */
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+header {
+  width: 100%;
+  height: 80px;
+  background-color:rgb(17, 185, 236);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
-/* Configurações do layout main */
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+header img {
+  height: 50px;
 }
 
-#cor {
-    height: 100vh;
-    background: linear-gradient(to bottom, #f3d64e 0%, #78c5d6 50%, #008bba 100%);
+#Crono {
+  height: 100px;
+  width: 100px;
 }
 
-#Imagem {
-    text-align: center;
-    margin-top: 20%;
+#CronoSee {
+  width: 450px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: auto;
+  position: fixed; 
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  margin-left: auto;
 }
 
-#Logo {
-    width: 400px;
+#botaoPopup {
+  height: 155px;
+  width: 155px;
+  border-radius: 64px;
+  background-color: rgb(17, 185, 236);
+  align-items: center;
+  display: inline-block;
+  margin-right: 15px;
 }
 
-#Form {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 10% auto;
-    gap: 10px;
-    align-items: flex-start;
+#CronoContent{
+  width: 100%;
+  height: 160px;
+  display: flexbox;
+  justify-content: center;
+  background-color: aqua;
+  border-radius: 120px;
+  align-content: center;
+  padding: auto;
+  box-sizing: border-box;
 }
 
-#Form h1 {
-    align-self: center;
-    margin-left: -16%;
-}
-#Form input,label, button{
-    margin-left: 10px;
-}
-input {
-    border-radius: 10px;
-    padding: 6px;
-    border: solid 1px;
-    width: 80%;
+#Content{
+  margin-left: 25px;
 }
 
-button {
-    border-radius: 10px;
-    padding: 6px;
-    border: solid 2px #A1D298;
-    background-color: #52A7C8;
-    color: #FFFFFF;
-    width: 60%;
-    margin-left: 10%;
-}
-
-@media (max-width: 600px) {
-    main {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #cor {
-        height: 30vh;
-    }
-
-    #Imagem {
-        margin-top: 10px;
-        margin-left: 5px;
-        width: 350px;
-    }
-
-    #Form {
-        width: 80%;
-    }
+#PopUp {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background-color: #fff;
+  border: 8px solid #666;
+  border-radius: 30px;
+  box-shadow: 2px 2px 4px #888;
 }
