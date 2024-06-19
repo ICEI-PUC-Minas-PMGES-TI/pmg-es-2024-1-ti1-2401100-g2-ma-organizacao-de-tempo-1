@@ -1,0 +1,163 @@
+*,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+header {
+    background-color: #71C9EC;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#Pages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+    align-items: center;
+}
+
+#Pages a {
+    color: #FFF;
+    border: solid 1px #FFE500;
+    padding: 6px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+main img {
+    width: 100%;
+    max-width: 200px; /* Diminui o tamanho máximo da imagem */
+    border: solid 1px;
+}
+
+#pt1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#pt2 {
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+#Form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    border: solid 4px #FFE500;
+    border-radius: 10px;
+    padding: 20px; /* Aumentar o padding para espaçamento */
+    gap: 10px;
+    background-color: #71C9EC;
+    align-items: flex-start;
+    margin-left: 100px; /* Adiciona margem à esquerda */
+}
+
+#Form input,
+textarea {
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 96%;
+    resize: none;
+}
+
+#Form label {
+    font-weight: bold;
+}
+
+#Form div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+#Form div button {
+    padding: 6px;
+    border-radius: 10px;
+    border: solid 1px;
+    font-weight: bold;
+    width: 100px;
+}
+
+#Form div button:hover {
+    cursor: pointer;
+}
+
+footer {
+    background-color: #71C9EC;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #Pages {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    #pt1, #pt2 {
+        padding: 10px;
+    }
+
+    #Form {
+        width: 100%;
+        margin-left: 0; /* Remove a margem esquerda em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    #Pages a {
+        padding: 4px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #Form input,
+    textarea {
+        padding: 8px;
+    }
+
+    #Form div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #Form div button {
+        width: 80%;
+    }
+}
