@@ -17,6 +17,16 @@ header {
     justify-content: space-between;
     padding: 10px;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header-img {
+    max-width: 40px; /* Ajuste o valor conforme necessário */
+    height: auto;
+}
+
 
 #Pages {
     display: flex;
@@ -34,10 +44,17 @@ header {
     text-decoration: none;
 }
 
-.grid-container {
+main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    padding: 20px;
+}
+
+main img {
+    width: 100%;
+    max-width: 200px;
+    border: solid 1px;
 }
 
 #pt1 {
@@ -52,49 +69,22 @@ header {
     margin-bottom: 40px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-thead {
-    background-color: #343a40;
-    color: white;
-}
-
-th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-footer {
-    background-color: #71C9EC;
-    padding: 10px;
-    text-align: center;
-}
-
-#edit-form-container {
-    display: none; /* Esconda inicialmente, será mostrado ao editar */
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-#editForm {
+#Form {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 500px;
     border: solid 4px #FFE500;
     border-radius: 10px;
-    padding: 20px;
+    padding: 20px; 
     gap: 10px;
     background-color: #71C9EC;
+    align-items: flex-start;
+    margin-left: 100px; 
 }
 
-#editForm input,
-#editForm textarea {
+#Form input,
+textarea {
     border: solid 1px;
     border-radius: 10px;
     padding: 10px;
@@ -102,11 +92,11 @@ footer {
     resize: none;
 }
 
-#editForm label {
+#Form label {
     font-weight: bold;
 }
 
-#editForm div {
+#Form div {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -114,7 +104,7 @@ footer {
     width: 100%;
 }
 
-#editForm div button {
+#Form div button {
     padding: 6px;
     border-radius: 10px;
     border: solid 1px;
@@ -122,8 +112,14 @@ footer {
     width: 100px;
 }
 
-#editForm div button:hover {
+#Form div button:hover {
     cursor: pointer;
+}
+
+footer {
+    background-color: #71C9EC;
+    padding: 10px;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -138,12 +134,17 @@ footer {
         margin-bottom: 10px;
     }
 
-    .grid-container {
+    main {
         grid-template-columns: 1fr;
     }
 
     #pt1, #pt2 {
         padding: 10px;
+    }
+
+    #Form {
+        width: 100%;
+        margin-left: 0;
     }
 }
 
@@ -156,31 +157,17 @@ footer {
         padding: 10px;
     }
 
-    table, th, td {
-        display: block;
-        width: 100%;
-    }
-
-    th, td {
-        box-sizing: border-box;
-    }
-
-    th {
-        background-color: #343a40;
-        color: white;
-    }
-
-    #editForm input,
+    #Form input,
     textarea {
         padding: 8px;
     }
 
-    #editForm div {
+    #Form div {
         flex-direction: column;
         align-items: center;
     }
 
-    #editForm div button {
+    #Form div button {
         width: 80%;
     }
 }
