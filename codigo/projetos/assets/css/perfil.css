@@ -15,6 +15,16 @@ header {
     background-color: rgba(113, 201, 236, 255);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header-img {
+    max-width: 40px;
+    height: auto;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -53,11 +63,11 @@ main {
     margin-left: 5%;
 }
 
-strong{
+strong {
     font-size: small;
 }
 
-span{
+span {
     font-size: small;
     margin-bottom: 2px;
 }
@@ -72,13 +82,13 @@ span{
 }
 
 .editarperfil.show {
-    display: block; 
+    display: block;
     opacity: 1;
     max-height: 1000px;
     text-align: center;
 }
 
-#inputName{
+#inputName {
     border-style: solid;
     margin: 2px;
     width: 500px;
@@ -87,7 +97,7 @@ span{
     padding: 10px;
 }
 
-#inputEmail{
+#inputEmail {
     border-style: solid;
     margin: 2px;
     width: 500px;
@@ -96,7 +106,7 @@ span{
     padding: 10px;
 }
 
-#inputIdade{
+#inputIdade {
     border-style: solid;
     margin: 2px;
     width: 500px;
@@ -105,7 +115,7 @@ span{
     padding: 10px;
 }
 
-#inputTelefone{
+#inputTelefone {
     border-style: solid;
     margin: 2px;
     width: 500px;
@@ -114,7 +124,7 @@ span{
     padding: 10px;
 }
 
-#inputData{
+#inputData {
     border-style: solid;
     margin: 2px;
     width: 500px;
@@ -130,7 +140,8 @@ span{
 }
 
 .label-float input,
-select, textarea {
+select,
+textarea {
     border: 1px solid #636363;
     height: 40px;
     outline: none;
@@ -194,7 +205,7 @@ select:focus,
     background-color: #0656d6;
 }
 
-#editarPerfilBtn{
+#editarPerfilBtn {
     margin-top: 20px;
     background-color: #2076ff;
     padding: 5px 10px;

@@ -8,15 +8,21 @@ body {
 header {
   width: 100%;
   height: 80px;
-  background-color:rgb(17, 185, 236);
+  background-color: rgb(17, 185, 236);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
 }
 
-header img {
-  height: 50px;
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header-img {
+  max-width: 40px;
+  height: auto;
 }
 
 #Crono {
@@ -31,9 +37,9 @@ header img {
   align-items: center;
   justify-content: space-between;
   padding: auto;
-  position: fixed; 
-  bottom: 20px; 
-  left: 50%; 
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
   transform: translateX(-50%);
   margin-left: auto;
 }
@@ -48,7 +54,7 @@ header img {
   margin-right: 15px;
 }
 
-#CronoContent{
+#CronoContent {
   width: 100%;
   height: 160px;
   display: flexbox;
@@ -60,7 +66,7 @@ header img {
   box-sizing: border-box;
 }
 
-#Content{
+#Content {
   margin-left: 25px;
 }
 

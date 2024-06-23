@@ -17,13 +17,14 @@ header {
     justify-content: space-between;
     padding: 10px;
 }
+
 img {
     max-width: 100%;
     height: auto;
 }
 
 .header-img {
-    max-width: 40px; /* Ajuste o valor conforme necessário */
+    max-width: 40px;
     height: auto;
 }
 
@@ -76,11 +77,11 @@ main img {
     max-width: 500px;
     border: solid 4px #FFE500;
     border-radius: 10px;
-    padding: 20px; 
+    padding: 20px;
     gap: 10px;
     background-color: #71C9EC;
     align-items: flex-start;
-    margin-left: 100px; 
+    margin-left: 100px;
 }
 
 #Form input,
@@ -138,7 +139,8 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    #pt1, #pt2 {
+    #pt1,
+    #pt2 {
         padding: 10px;
     }
 

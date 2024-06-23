@@ -12,7 +12,8 @@ body {
     line-height: 1.6;
 }
 
-header, footer {
+header,
+footer {
     background-color: #71C9EC;
     color: white;
     text-align: center;
@@ -38,8 +39,12 @@ header {
     border-radius: 5px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .header-img {
     max-width: 40px;
     height: auto;
 }
-

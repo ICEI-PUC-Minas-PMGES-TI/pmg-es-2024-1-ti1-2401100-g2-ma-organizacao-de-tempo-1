@@ -10,6 +10,17 @@ body {
     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header-img {
+    max-width: 40px;
+    /* Ajuste o valor conforme necessário */
+    height: auto;
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;

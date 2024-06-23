@@ -15,42 +15,52 @@ header {
     background-color: rgba(113, 201, 236, 255);
 }
 
-.not{
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header-img {
+    max-width: 40px;
+    height: auto;
+}
+
+.not {
     margin-right: 20px;
 }
 
-.imgdeperfil{
+.imgdeperfil {
     margin-right: 20px;
 }
 
-.config{
+.config {
     margin-right: 10px;
 }
 
-.titulo{
+.titulo {
     text-align: center;
     margin-top: 3%;
 }
 
-h1{
+h1 {
     font-weight: bold;
 }
 
-h2{
+h2 {
     font-weight: bold;
 }
 
-#hoje{
+#hoje {
     margin-left: 2%;
     margin-bottom: 2%;
 }
 
-#ontem{
+#ontem {
     margin-left: 2%;
     margin-bottom: 2%;
 }
 
-#anteriores{
+#anteriores {
     margin-left: 2%;
 }
 
@@ -70,7 +80,7 @@ h2{
     margin-right: 10px;
 }
 
-.boxnotificacao p{
+.boxnotificacao p {
     position: relative;
     top: 8px;
 }

@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,34 +12,44 @@
 }
 
 
-header{
-    background-color: rgba(113,201,236,255);
+header {
+    background-color: rgba(113, 201, 236, 255);
 }
 
-#bordas{
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header-img {
+    max-width: 40px;
+    height: auto;
+}
+
+#bordas {
     transition: all .3s;
 }
 
-#bordas:hover{
+#bordas:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-#bordas:active{
+#bordas:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-#main{
+#main {
     padding-bottom: 300px;
 }
 
-form{
-    background-color: rgba(113,201,236,255);
+form {
+    background-color: rgba(113, 201, 236, 255);
 }
 
-#botao-adicionar{
-    background-color: rgba(113,201,236,255);
+#botao-adicionar {
+    background-color: rgba(113, 201, 236, 255);
     color: white;
     padding: 5px;
     border-radius: 10rem;
@@ -47,8 +57,8 @@ form{
     transition: all .3s;
 }
 
-#botao-cancelar{
-    background-color: rgba(113,201,236,255);
+#botao-cancelar {
+    background-color: rgba(113, 201, 236, 255);
     color: white;
     padding: 5px;
     border-radius: 10rem;
@@ -57,46 +67,46 @@ form{
     transition: all .3s;
 }
 
-#botao-adicionar:hover{
+#botao-adicionar:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-#botao-adicionar:active{
+#botao-adicionar:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-#botao-cancelar:hover{
+#botao-cancelar:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-#botao-cancelar:active{
+#botao-cancelar:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 
 @media screen and (max-width: 930px) {
+
     input[type="text"],
-    input[type="datetime-local"]{
-      max-width: 100%; 
+    input[type="datetime-local"] {
+        max-width: 100%;
     }
-  
-    
+
+
     #botoes {
         max-width: 100%;
-        flex-direction: column; 
+        flex-direction: column;
     }
-  
+
     #botoes button {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100%; 
+        width: 100%;
         margin-bottom: 10px;
     }
 }
-

@@ -24,7 +24,7 @@ img {
 }
 
 .header-img {
-    max-width: 40px; /* Ajuste o valor conforme necessário */
+    max-width: 40px;
     height: auto;
 }
 
@@ -72,7 +72,8 @@ thead {
     color: white;
 }
 
-th, td {
+th,
+td {
     padding: 10px;
     border: 1px solid #ddd;
     text-align: left;
@@ -85,7 +86,8 @@ footer {
 }
 
 #edit-form-container {
-    display: none; /* Esconda inicialmente, será mostrado ao editar */
+    display: none;
+    /* Esconda inicialmente, será mostrado ao editar */
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
@@ -153,7 +155,8 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    #pt1, #pt2 {
+    #pt1,
+    #pt2 {
         padding: 10px;
     }
 }
@@ -167,12 +170,15 @@ footer {
         padding: 10px;
     }
 
-    table, th, td {
+    table,
+    th,
+    td {
         display: block;
         width: 100%;
     }
 
-    th, td {
+    th,
+    td {
         box-sizing: border-box;
     }
 
@@ -195,4 +201,3 @@ footer {
         width: 80%;
     }
 }
-

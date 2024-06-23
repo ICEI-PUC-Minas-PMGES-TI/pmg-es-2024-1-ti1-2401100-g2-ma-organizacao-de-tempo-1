@@ -10,6 +10,16 @@ body {
     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header-img {
+    max-width: 40px;
+    height: auto;
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -131,6 +141,7 @@ footer p {
     }
 
     #dados-cadastro {
-        width: 90%;  /* Ajustando para uma melhor visualização em dispositivos móveis */
+        width: 90%;
+        /* Ajustando para uma melhor visualização em dispositivos móveis */
     }
 }

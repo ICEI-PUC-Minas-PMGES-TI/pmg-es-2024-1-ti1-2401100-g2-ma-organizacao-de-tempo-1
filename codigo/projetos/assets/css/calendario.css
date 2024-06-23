@@ -1,36 +1,45 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
-/* Definição da fonte personalizada */
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
 }
 
 
-header{
-    background-color: rgba(113,201,236,255);
+header {
+    background-color: rgba(113, 201, 236, 255);
 }
 
-#calendario{
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header-img {
+    max-width: 40px;
+    height: auto;
+}
+
+#calendario {
     width: 100%;
 }
 
 
-#datas{
+#datas {
     margin: auto;
     width: 98%;
     max-width: 380px;
 }
 
-#datas ul{
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
+#datas ul {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 #dates {
@@ -38,27 +47,27 @@ header{
     flex-wrap: wrap;
     margin: 0;
 }
-  
 
-#dates li.inactive{
+
+#dates li.inactive {
     color: #c2c1c1b6;
 }
 
-#bordas{
+#bordas {
     transition: all .3s;
 }
 
-#bordas:hover{
+#bordas:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-#bordas:active{
+#bordas:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-#datas ul li{
+#datas ul li {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -68,29 +77,29 @@ header{
     z-index: 2;
 }
 
-#dates ul{
+#dates ul {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
 }
 
-#dia:hover{
+#dia:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-#dia:active{
+#dia:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.btn{
+.btn {
     display: flex;
     justify-content: center;
 }
 
-#botao-cadastrar{
-    background-color: rgba(113,201,236,255);
+#botao-cadastrar {
+    background-color: rgba(113, 201, 236, 255);
     color: white;
     padding: 5px;
     border-radius: 10rem;
@@ -98,41 +107,42 @@ header{
     transition: all .3s;
 }
 
-#botao-cadastrar:hover{
+#botao-cadastrar:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-#botao-cadastrar:active{
+#botao-cadastrar:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-#mes-anterior, #mes-seguinte{
+#mes-anterior,
+#mes-seguinte {
     transition: all .2s;
 }
 
-#mes-anterior:hover{
+#mes-anterior:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-#mes-anterior:active{
+#mes-anterior:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-#mes-seguinte:hover{
+#mes-seguinte:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-#mes-anterior:active{
+#mes-anterior:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-#tarefas table{
+#tarefas table {
     display: flex;
     flex-direction: column;
 
@@ -147,7 +157,7 @@ header{
     padding-top: 10px;
 }
 
-#tarefas td{
+#tarefas td {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,17 +170,17 @@ header{
 }
 
 
-#tarefas tr{
+#tarefas tr {
     display: flex;
     justify-content: space-evenly;
 }
 
-#botoes-crud{
+#botoes-crud {
     display: flex;
     flex-direction: column;
 }
 
-.tarefa{
+.tarefa {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -178,9 +188,9 @@ header{
 }
 
 
-#tarefas button{
+#tarefas button {
     padding: 5px;
-    background-color: rgba(113,201,236,255);
+    background-color: rgba(113, 201, 236, 255);
     color: white;
     padding: 5px;
     border-radius: 10rem;
@@ -190,10 +200,9 @@ header{
 }
 
 
-  
+
 @media screen and (max-width: 600px) {
-#botao-cadastrar {
-    font-size: 14px; 
+    #botao-cadastrar {
+        font-size: 14px;
+    }
 }
-}
-  
