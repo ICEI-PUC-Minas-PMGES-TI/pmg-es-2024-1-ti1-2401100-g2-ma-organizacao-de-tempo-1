@@ -1,0 +1,45 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+header, footer {
+    background-color: #71C9EC;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#Pages {
+    display: flex;
+    gap: 1rem;
+}
+
+#Pages a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.header-img {
+    max-width: 40px;
+    height: auto;
+}
+
