@@ -36,7 +36,8 @@ header {
     color: white;
     text-decoration: none;
     padding: 0.5rem;
-    border-radius: 5px;
+    border-radius: 6px;
+    border: solid 1px #FFE500;
 }
 
 img {
