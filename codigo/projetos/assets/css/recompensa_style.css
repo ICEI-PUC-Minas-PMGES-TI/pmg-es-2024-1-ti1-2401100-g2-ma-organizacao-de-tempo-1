@@ -1,0 +1,104 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    vertical-align:baseline;
+}
+
+header{
+    height: 78px;
+    width: 100%;
+    background-color: #71C9EC;
+}
+ 
+.buttonsheader {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+li {
+    margin-right: 20px;
+}
+
+#bordas{
+    transition: all .3s;
+}
+
+#bordas:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#bordas:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+main h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 4%;
+    height: 80%;
+    font-weight: bold;
+}
+
+.saldocoins {
+    border: 1.5px solid black;
+    border-radius: 20px;
+    height: 50px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.cronocoin {
+    align-items: center;
+    margin-bottom: 6px;
+    justify-content: center;
+    display: flex;
+}
+
+h2 {
+    width: 38px;
+    height: 388px;
+}
+footer {
+    align-items: center;
+    text-align: center;
+    margin-top: 180px;
+}
+
+p1 {
+    color: #353636;
+    font-weight: bold;
+    font-size: 2em;
+
+}
+
+.passos {
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .navbar-nav li {
+    margin-bottom: 10px;
+  }
+
+  main h1, p1, .passos {
+    font-size: 1.5em;
+  }
+
+  .navbar .navbar-toggler {
+    display: none;
+  }
+}
