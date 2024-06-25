@@ -199,10 +199,10 @@ A divisão de tarefas foi que cada integrante ficará com 2 funcionalidades, sej
 
 | Ambiente  | Plataforma              |Link de Acesso |
 |-----------|-------------------------|---------------|
-|Processo de Design Thinkgin  | Miro | [ https://miro.com/XXXXXXX](https://miro.com/app/board/uXjVNiWnu8Y=/) | 
-|Repositório de código | GitHub | [https://github.com/XXXXXXX](https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2401100-g2-ma-organizacao-de-tempo-1) | 
-|Hospedagem do site | Heroku |  https://XXXXXXX.herokuapp.com | 
-|Protótipo Interativo | MavelApp ou Figma | [https://figma.com/XXXXXXX](https://www.figma.com/file/iQMHstsrCU4ADBZIrXrY6j/CronoFlex?type=design&node-id=0%3A1&mode=design&t=3Uem3uN74RfZ91rh-1) | 
+|Processo de Design Thinkgin  | Miro | [ https://miro.com](https://miro.com/app/board/uXjVNiWnu8Y=/) | 
+|Repositório de código | GitHub | [https://github.com](https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2401100-g2-ma-organizacao-de-tempo-1) | 
+|Hospedagem do site | Vercel |  [https://vercel.com](https://pmg-es-2024-1-ti1-2401100-g2-ma-organizacao-de-tempo-1.vercel.app/) | 
+|Protótipo Interativo | Figma | [https://figma.com](https://www.figma.com/design/iQMHstsrCU4ADBZIrXrY6j/CronoFlex?node-id=59-74&t=zWeQZHOEgOLQZW5d-1) | 
 
 ## Controle de Versão
 
@@ -262,6 +262,15 @@ A divisão de tarefas foi que cada integrante ficará com 2 funcionalidades, sej
 > (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
 > item textualmente comentando e complementando o que está apresentado
 > nas imagens.
+
+> Tendo em vista que o projeto é uma aplicação Web, as tecnologias
+> usadas para programar foram:
+> HTML, CSS e Javascript, com alguns usos do framework Bootstrap
+
+> A IDE escolhida para programar a solução foi:
+> VisualCode
+
+> Utilizamos o framework Bootstrap para facilitar a implementação e o uso de responsividade
 
 ## Arquitetura da solução
 
