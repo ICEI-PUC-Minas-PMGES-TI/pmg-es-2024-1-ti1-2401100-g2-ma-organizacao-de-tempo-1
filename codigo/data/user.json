@@ -1,22 +1,36 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "username": "user1",
-            "email": "user1@example.com",
-            "password": "password123"
-        },
-        {
-            "id": 2,
-            "username": "user2",
-            "email": "user2@example.com",
-            "password": "password456"
-        },
-        {
-            "id": 3,
-            "username": "user3",
-            "email": "user3@example.com",
-            "password": "password789"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "email": "user1@example.com",
+      "password": "password123",
+      "telefone": "1234567890",
+      "nascimento": "1990-01-01"
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "email": "user2@example.com",
+      "password": "password456",
+      "telefone": "0987654321",
+      "nascimento": "1992-02-02"
+    },
+    {
+      "id": 3,
+      "username": "user3",
+      "email": "user3@example.com",
+      "password": "password789",
+      "telefone": "1122334455",
+      "nascimento": "1994-03-03"
+    },
+    {
+      "id": 1719431047809,
+      "username": "BERNARDO PACE PEREIRA ARANTES",
+      "email": "bernardo@gmail.com",
+      "password": "1234",
+      "telefone": "(31) 99999-9999",
+      "nascimento": "2000-08-08"
+    }
+  ]
 }

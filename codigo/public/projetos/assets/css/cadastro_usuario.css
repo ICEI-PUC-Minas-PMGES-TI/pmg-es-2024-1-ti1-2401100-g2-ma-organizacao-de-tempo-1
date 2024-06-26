@@ -106,10 +106,23 @@ main {
     border: solid 1px #FFE500;
 }
 
+#senha {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
 #botoes {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+#mostrarSenhasContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
 }
 
 button {
@@ -138,7 +151,6 @@ footer {
 footer p {
     margin: 0;
 }
-
 
 @media (max-width: 600px) {
     main {
