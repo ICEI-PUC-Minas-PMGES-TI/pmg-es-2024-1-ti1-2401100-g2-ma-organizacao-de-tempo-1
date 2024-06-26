@@ -1,0 +1,136 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+#Pt1 {
+    background-image: url("../images/Fundo_Login.png");
+    color: white;
+    height: 96vh;
+}
+
+#Pt1 h1 {
+    padding: 10%;
+    font-weight: bold;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+#Pt2 {
+    padding: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 200px 0px 0px 200px;
+    width: 400px;
+}
+
+input {
+    padding: 6px;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+}
+
+input:focus {
+    border-bottom: 2px solid black;
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    background: #71C9EC;
+    color: white;
+    border: none;
+    width: 100%;
+}
+
+.inline-elements {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.inline-elements a {
+    margin-left: 10%;
+}
+
+#top {
+    margin-top: 20px;
+}
+
+#logo {
+    width: 150px;
+}
+
+input[type="checkbox"]:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #71C9EC;
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 992px) {
+    main {
+        flex-direction: column;
+    }
+
+    #Pt1,
+    #Pt2 {
+        width: 100%;
+    }
+
+    form {
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    #Pt1 h1 {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #Pt1 h1 {
+        font-size: 1.5rem;
+    }
+
+    #logo {
+        width: 100px;
+    }
+
+    form {
+        padding: 0.5rem;
+    }
+
+    button {
+        padding: 8px;
+    }
+}
