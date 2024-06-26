@@ -10,6 +10,10 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
+    background-image: url('../images/fundo_presentation.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header,
@@ -54,10 +58,6 @@ main{
     display: flex;
     width: 100%;
     height: 100vh;
-    background-image: url('../images/fundo_presentation.png');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
     color: black;
@@ -72,7 +72,6 @@ h1{
 }
 
 .listaconvencimento{
-    list-style-image: url(../images/);
     font-size: large;
 }
 
