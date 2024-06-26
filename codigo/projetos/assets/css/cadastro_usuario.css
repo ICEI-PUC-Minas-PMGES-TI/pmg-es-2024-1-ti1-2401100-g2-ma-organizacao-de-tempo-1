@@ -10,19 +10,37 @@ body {
     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #71C9EC;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+header img {
+    width: 60px;
+}
+
 img {
     max-width: 100%;
     height: auto;
 }
 
-.header-img {
-    max-width: 40px;
-    height: auto;
-}
-
 main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 82vh;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    gap: 10%;
 }
 
 #cor {
@@ -75,7 +93,20 @@ main {
     margin-left: 10px;
 }
 
-#button-container {
+#Pages {
+    display: flex;
+    gap: 1rem;
+}
+
+#Pages a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: solid 1px #FFE500;
+}
+
+#botoes {
     width: 100%;
     display: flex;
     justify-content: center;

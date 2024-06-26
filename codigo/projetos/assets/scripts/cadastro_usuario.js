@@ -1,40 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('Form');
 
-    form.addEventListener('submit', function (event) {
+    form.addEventListener('submit', async function (event) {
         event.preventDefault();
 
-        // Captura dos campos
         const nome = document.getElementById('nome').value;
         const email = document.getElementById('email').value;
-        const idade = document.getElementById('idade').value;
-        const endereco = document.getElementById('endereco').value;
-        const telefone = document.getElementById('telefone').value;
         const nascimento = document.getElementById('nascimento').value;
+        const telefone = document.getElementById('telefone').value;
         const senha = document.getElementById('senha').value;
 
-        // Criação de um objeto para a pessoa cadastrada
         const novaPessoa = {
             nome,
             email,
-            idade,
-            endereco,
-            telefone,
             nascimento,
+            telefone,
             senha
         };
 
-        // Obtendo o array de pessoas já cadastradas
-        const pessoasCadastradas = JSON.parse(localStorage.getItem('pessoas')) || [];
+        // Fetch existing users from user.json
+        let pessoasCadastradas;
+        try {
+            const response = await fetch('/data/user.json');
+            pessoasCadastradas = await response.json();
+        } catch (error) {
+            console.error('Erro ao carregar os dados existentes', error);
+            pessoasCadastradas = [];
+        }
 
-        // Adicionando a nova pessoa ao array
-        pessoasCadastradas.push(novaPessoa);
+        // Check if the email already exists
+        const emailExists = pessoasCadastradas.some(pessoa => pessoa.email === email);
 
-        // Armazenando novamente o array atualizado no localStorage
-        localStorage.setItem('pessoas', JSON.stringify(pessoasCadastradas));
+        if (emailExists) {
+            alert('Já existe um cadastro com esse email.');
+        } else {
+            pessoasCadastradas.push(novaPessoa);
 
-        // Alerta de sucesso e redirecionamento
-        alert('Cadastro concluído com sucesso!');
-        window.location.href = 'editarDados.html';
+            // Save the updated list back to user.json
+            try {
+                await fetch('/data/user.json', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(pessoasCadastradas)
+                });
+                alert('Cadastro concluído com sucesso!');
+                window.location.href = 'editar_usuario.html';
+            } catch (error) {
+                console.error('Erro ao salvar os dados', error);
+                alert('Erro ao salvar os dados. Tente novamente.');
+            }
+        }
     });
 });
