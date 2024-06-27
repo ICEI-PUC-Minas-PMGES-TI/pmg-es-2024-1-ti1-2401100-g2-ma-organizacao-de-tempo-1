@@ -25,20 +25,20 @@
       "nascimento": "1994-03-03"
     },
     {
-      "id": 1719431047809,
-      "username": "BERNARDO PACE PEREIRA ARANTES",
+      "id": 1719512052798,
+      "username": "Bernardo Arantes",
       "email": "bernardo@gmail.com",
       "password": "1234",
       "telefone": "(31) 99999-9999",
-      "nascimento": "2000-08-08"
+      "nascimento": "2000-01-01"
     },
     {
-      "id": 1719453193322,
-      "username": "klaus",
+      "id": 1719512482828,
+      "username": "klaus mikaelson",
       "email": "klaus@gmail.com",
       "password": "klaus123",
       "telefone": "(31) 99999-9999",
-      "nascimento": "1090-09-19"
+      "nascimento": "1090-01-01"
     }
   ]
 }

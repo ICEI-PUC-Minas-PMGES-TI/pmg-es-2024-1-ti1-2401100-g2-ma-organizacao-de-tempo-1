@@ -45,37 +45,24 @@ document.addEventListener('DOMContentLoaded', () => {
             nascimento: nascimento
         };
 
-        let pessoasCadastradas;
         try {
-            const response = await fetch('/data/user.json');
-            const data = await response.json();
-            pessoasCadastradas = data.users;
-        } catch (error) {
-            console.error('Erro ao carregar os dados existentes', error);
-            pessoasCadastradas = [];
-        }
+            const response = await fetch('/data/user', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(novaPessoa)
+            });
 
-        const emailExists = pessoasCadastradas.some(user => user.email === email);
-
-        if (emailExists) {
-            alert('Já existe um cadastro com esse email.');
-        } else {
-            pessoasCadastradas.push(novaPessoa);
-
-            try {
-                await fetch('/data/user.json', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ users: pessoasCadastradas }, null, 2)
-                });
+            if (response.ok) {
                 alert('Cadastro concluído com sucesso!');
                 window.location.href = '../login/login.html';
-            } catch (error) {
-                console.error('Erro ao salvar os dados', error);
-                alert('Erro ao salvar os dados. Tente novamente.');
+            } else {
+                throw new Error('Erro ao salvar os dados');
             }
+        } catch (error) {
+            console.error('Erro ao salvar os dados', error);
+            alert('Erro ao salvar os dados. Tente novamente.');
         }
     });
 });

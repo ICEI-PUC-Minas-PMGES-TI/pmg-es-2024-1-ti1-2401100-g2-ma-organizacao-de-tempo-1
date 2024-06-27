@@ -3,26 +3,33 @@ let currentPage = 1;
 let descriptions = [];
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetchDescriptions();
+    loadDescriptions();
     document.getElementById('registerButton').addEventListener('click', registerDescription);
 });
 
-function fetchDescriptions() {
-    fetch('/data/info.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro ao carregar o arquivo JSON.');
-            }
-            return response.json();
-        })
-        .then(data => {
-            descriptions = data.descriptions || [];
-            displayDescriptions();
-        })
-        .catch(error => {
-            console.error('Erro na requisição JSON:', error);
-            document.getElementById('descriptionList').innerHTML = '<p>Erro ao carregar as descrições.</p>';
-        });
+function loadDescriptions() {
+    const storedDescriptions = localStorage.getItem('descriptions');
+    if (storedDescriptions) {
+        descriptions = JSON.parse(storedDescriptions);
+        displayDescriptions();
+    } else {
+        fetch('/data/info.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao carregar o arquivo JSON.');
+                }
+                return response.json();
+            })
+            .then(data => {
+                descriptions = data.descriptions || [];
+                localStorage.setItem('descriptions', JSON.stringify(descriptions));
+                displayDescriptions();
+            })
+            .catch(error => {
+                console.error('Erro na requisição JSON:', error);
+                document.getElementById('descriptionList').innerHTML = '<p>Erro ao carregar as descrições.</p>';
+            });
+    }
 }
 
 function registerDescription() {
@@ -53,7 +60,9 @@ function registerDescription() {
             })
             .then(data => {
                 console.log('Dados salvos com sucesso:', data);
-                fetchDescriptions(); // Reload descriptions
+                descriptions.push(newDescription);
+                localStorage.setItem('descriptions', JSON.stringify(descriptions));
+                displayDescriptions();
 
                 // Clear the form fields
                 document.getElementById('descriptionTitle').value = '';
@@ -131,8 +140,9 @@ function changePage(page) {
 
 function removeDescription(index) {
     descriptions.splice(index, 1);
-    saveDescriptions();
+    localStorage.setItem('descriptions', JSON.stringify(descriptions));
     displayDescriptions();
+    saveDescriptions();
 }
 
 function saveDescriptions() {

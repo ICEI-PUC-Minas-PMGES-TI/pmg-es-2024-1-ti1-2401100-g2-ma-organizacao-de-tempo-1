@@ -15,33 +15,33 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
 
     console.log('Tentando fazer login com:', username, password);
 
-    fetch('/data/user.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro ao carregar o arquivo JSON.');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Dados carregados:', data);
-            var users = data.users;
-
-            var authenticatedUser = users.find(function (user) {
-                return (user.username === username || user.email === username) && user.password === password;
-            });
-
-            if (authenticatedUser) {
-                console.log('Usuário autenticado:', authenticatedUser);
-                window.location.href = '../descricao/description.html';
+    // Autenticar usuário
+    fetch('/data/user/authenticate', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+    })
+    .then(response => {
+        if (!response.ok) {
+            if (response.status === 401) {
+                throw new Error('Usuário ou senha incorretos.');
             } else {
-                console.log('Usuário ou senha incorretos.');
-                displayErrorPopup('Usuário ou senha incorretos.');
+                throw new Error('Erro ao tentar fazer login.');
             }
-        })
-        .catch(error => {
-            console.error('Erro na requisição JSON:', error);
-            displayErrorPopup('Erro ao tentar fazer login.');
-        });
+        }
+        return response.json();
+    })
+    .then(authenticatedUser => {
+        console.log('Usuário autenticado:', authenticatedUser);
+        localStorage.setItem('authenticatedUser', JSON.stringify(authenticatedUser));
+        window.location.href = '../descricao/description.html';
+    })
+    .catch(error => {
+        console.error('Erro na requisição:', error);
+        displayErrorPopup(error.message);
+    });
 });
 
 function displayErrorPopup(errorMessage) {

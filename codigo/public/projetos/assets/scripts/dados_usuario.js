@@ -1,106 +1,107 @@
 let indiceEdicao = null;
+const userKey = 'authenticatedUser';
 
-// Função para preencher a lista de pessoas cadastradas
-function preencherListaPessoas() {
-    const pessoas = JSON.parse(localStorage.getItem('pessoas')) || [];
-    const listaPessoas = document.getElementById('listaPessoas');
+// Função para preencher o formulário com os dados do usuário autenticado
+function preencherDadosUsuario() {
+    const usuario = JSON.parse(localStorage.getItem(userKey));
 
-    listaPessoas.innerHTML = '';
-
-    pessoas.forEach((pessoa, index) => {
-        const li = document.createElement('li');
-        li.innerHTML = `
-            <strong>${pessoa.nome}</strong>
-            <button onclick="editarPessoa(${index})">Editar</button>
-            <button onclick="deletarPessoa(${index})">Deletar</button>
-        `;
-        listaPessoas.appendChild(li);
-    });
+    if (usuario) {
+        document.getElementById('nome').value = usuario.username;
+        document.getElementById('email').value = usuario.email;
+        document.getElementById('idade').value = calcularIdade(usuario.nascimento);
+        document.getElementById('telefone').value = usuario.telefone;
+        document.getElementById('nascimento').value = usuario.nascimento;
+        document.getElementById('senha').value = usuario.password;
+    } else {
+        alert('Nenhum usuário autenticado encontrado.');
+    }
 }
 
-// Função para preencher os campos do formulário de edição
-function editarPessoa(index) {
-    const pessoas = JSON.parse(localStorage.getItem('pessoas')) || [];
-    const pessoa = pessoas[index];
+// Função para calcular a idade a partir da data de nascimento
+function calcularIdade(nascimento) {
+    const hoje = new Date();
+    const dataNascimento = new Date(nascimento);
+    let idade = hoje.getFullYear() - dataNascimento.getFullYear();
+    const mes = hoje.getMonth() - dataNascimento.getMonth();
 
-    document.getElementById('nome').value = pessoa.nome;
-    document.getElementById('email').value = pessoa.email;
-    document.getElementById('idade').value = pessoa.idade;
-    document.getElementById('endereco').value = pessoa.endereco;
-    document.getElementById('telefone').value = pessoa.telefone;
-    document.getElementById('nascimento').value = pessoa.nascimento;
-    document.getElementById('senha').value = pessoa.senha;
+    if (mes < 0 || (mes === 0 && hoje.getDate() < dataNascimento.getDate())) {
+        idade--;
+    }
 
-    indiceEdicao = index;
+    return idade;
 }
 
-// Função para salvar as alterações feitas em uma pessoa
+// Função para salvar as alterações feitas no usuário autenticado
 function salvarAlteracoes() {
-    const pessoas = JSON.parse(localStorage.getItem('pessoas')) || [];
+    const usuario = JSON.parse(localStorage.getItem(userKey));
 
-    if (indiceEdicao !== null) {
-        pessoas[indiceEdicao] = {
-            nome: document.getElementById('nome').value,
-            email: document.getElementById('email').value,
-            idade: document.getElementById('idade').value,
-            endereco: document.getElementById('endereco').value,
-            telefone: document.getElementById('telefone').value,
-            nascimento: document.getElementById('nascimento').value,
-            senha: document.getElementById('senha').value
-        };
+    if (usuario) {
+        usuario.username = document.getElementById('nome').value;
+        usuario.email = document.getElementById('email').value;
+        usuario.telefone = document.getElementById('telefone').value;
+        usuario.nascimento = document.getElementById('nascimento').value;
+        usuario.password = document.getElementById('senha').value;
 
-        localStorage.setItem('pessoas', JSON.stringify(pessoas));
-        alert('Alterações salvas com sucesso!');
-        preencherListaPessoas();
-        limparFormulario();
-        indiceEdicao = null;
+        localStorage.setItem(userKey, JSON.stringify(usuario));
+
+        // Atualizar no servidor
+        fetch('/data/user.json', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(usuario)
+        })
+            .then(response => response.json())
+            .then(data => {
+                alert('Alterações salvas com sucesso!');
+            })
+            .catch(error => {
+                console.error('Erro ao salvar alterações:', error);
+                alert('Erro ao salvar alterações.');
+            });
     } else {
-        alert('Nenhuma pessoa selecionada para edição.');
+        alert('Nenhum usuário autenticado encontrado.');
     }
 }
 
-// Função para deletar uma pessoa
-function deletarPessoa(index) {
-    const pessoas = JSON.parse(localStorage.getItem('pessoas')) || [];
+// Função para deletar o usuário autenticado
+function deletarUsuario() {
+    const usuario = JSON.parse(localStorage.getItem(userKey));
 
-    if (confirm('Tem certeza de que deseja excluir este cadastro?')) {
-        pessoas.splice(index, 1);
-        localStorage.setItem('pessoas', JSON.stringify(pessoas));
-        preencherListaPessoas();
-        limparFormulario();
-        indiceEdicao = null;
-    }
-}
-
-// Função para deletar a pessoa que está sendo editada
-function deletarPessoaAtual() {
-    if (indiceEdicao !== null) {
-        deletarPessoa(indiceEdicao);
+    if (usuario) {
+        if (confirm('Tem certeza de que deseja excluir este cadastro?')) {
+            fetch(`/data/user/${usuario.id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    localStorage.removeItem(userKey);
+                    alert('Usuário deletado com sucesso!');
+                    window.location.href = '../login/login.html';
+                })
+                .catch(error => {
+                    console.error('Erro ao deletar usuário:', error);
+                    alert('Erro ao deletar usuário.');
+                });
+        }
     } else {
-        alert('Nenhuma pessoa selecionada para exclusão.');
+        alert('Nenhum usuário autenticado encontrado.');
     }
 }
 
-// Função para limpar o formulário após edição
-function limparFormulario() {
-    document.getElementById('nome').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('idade').value = '';
-    document.getElementById('endereco').value = '';
-    document.getElementById('telefone').value = '';
-    document.getElementById('nascimento').value = '';
-    document.getElementById('senha').value = '';
-}
-
-// Função para voltar à página inicial
+// Função para voltar à página descrição
 function voltarParaIndex() {
-    window.location.href = 'index.html';
+    window.location.href = '../descricao/description.html';
 }
 
 // Configurar eventos e inicializar dados ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
-    preencherListaPessoas();
+    preencherDadosUsuario();
     document.getElementById('salvar').addEventListener('click', salvarAlteracoes);
-    document.getElementById('deletar').addEventListener('click', deletarPessoaAtual);
+    document.getElementById('deletar').addEventListener('click', deletarUsuario);
     document.getElementById('voltar').addEventListener('click', voltarParaIndex);
 });
