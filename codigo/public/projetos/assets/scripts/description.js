@@ -1,4 +1,4 @@
-const descriptionsPerPage = 1;
+const descriptionsPerPage = 5;
 let currentPage = 1;
 let descriptions = [];
 
@@ -28,47 +28,49 @@ function fetchDescriptions() {
 function registerDescription() {
     const title = document.getElementById('descriptionTitle').value.trim();
     const text = document.getElementById('descriptionText').value.trim();
+    const imageInput = document.getElementById('descriptionImage');
+    const imageFile = imageInput.files[0];
 
     if (title && text) {
         const newDescription = { title, text };
-        descriptions.push(newDescription);
-        saveDescriptions();
 
-        // Clear the form fields
-        document.getElementById('descriptionTitle').value = '';
-        document.getElementById('descriptionText').value = '';
+        const formData = new FormData();
+        formData.append('title', title);
+        formData.append('text', text);
+        if (imageFile) {
+            formData.append('image', imageFile);
+        }
 
-        // Dismiss the modal
-        var modal = bootstrap.Modal.getInstance(document.getElementById('staticBackdrop'));
-        modal.hide();
+        fetch('/data/info.json', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao salvar os dados.');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Dados salvos com sucesso:', data);
+                descriptions.push(newDescription);
+                displayDescriptions();
 
-        // Update the displayed descriptions
-        displayDescriptions();
+                // Clear the form fields
+                document.getElementById('descriptionTitle').value = '';
+                document.getElementById('descriptionText').value = '';
+                imageInput.value = '';
+
+                // Dismiss the modal
+                var modal = bootstrap.Modal.getInstance(document.getElementById('staticBackdrop'));
+                modal.hide();
+            })
+            .catch(error => {
+                console.error('Erro ao salvar os dados:', error);
+            });
     } else {
         alert('Both fields are required!');
     }
-}
-
-function saveDescriptions() {
-    fetch('/data/info.json', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ descriptions })
-    })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro ao salvar os dados.');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Dados salvos com sucesso:', data);
-        })
-        .catch(error => {
-            console.error('Erro ao salvar os dados:', error);
-        });
 }
 
 function displayDescriptions() {
@@ -90,8 +92,9 @@ function displayDescriptions() {
         <div class="container d-flex flex-column align-items-center justify-content-center">
             <h3>${desc.title}</h3>
             <p>${desc.text}</p>
+            ${desc.image ? `<img src="${desc.image}" alt="${desc.title}" class="img-fluid" style="max-width: 100%; height: auto;">` : ''}
             <div>
-                <button class="btn btn-danger" onclick="removeDescription(${start + index})">Remove</button>
+                <button class="btn btn-danger" onclick="removeDescription(${start + index})">Remover</button>
             </div>
         </div>
     `).join('');
