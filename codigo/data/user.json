@@ -31,6 +31,14 @@
       "password": "1234",
       "telefone": "(31) 99999-9999",
       "nascimento": "2000-08-08"
+    },
+    {
+      "id": 1719453193322,
+      "username": "klaus",
+      "email": "klaus@gmail.com",
+      "password": "klaus123",
+      "telefone": "(31) 99999-9999",
+      "nascimento": "1090-09-19"
     }
   ]
 }

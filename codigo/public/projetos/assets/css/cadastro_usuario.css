@@ -5,11 +5,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
-}
-
 header {
     display: flex;
     justify-content: space-between;
@@ -30,113 +25,26 @@ img {
 }
 
 main {
+    min-height: 82vh;
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 82vh;
     justify-content: center;
     align-items: center;
-    color: black;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     gap: 10%;
 }
-
-#cor {
-    height: 100vh;
-    background: linear-gradient(to bottom, #f3d64e 0%, #78c5d6 50%, #008bba 100%);
-}
-
-#Imagem {
-    text-align: center;
-    margin-top: 20%;
-}
-
-#Logo {
-    width: 400px;
-}
-
-#form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-#Form {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    gap: 10px;
-    align-items: flex-start;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#Form h1 {
-    align-self: center;
-    margin-bottom: 20px;
-}
-
-#Form label {
-    margin-left: 10px;
-}
-
-#Form input {
-    border-radius: 10px;
-    padding: 6px;
-    border: solid 1px;
-    width: 90%;
-    margin-left: 10px;
-}
-
-#Pages {
-    display: flex;
-    gap: 1rem;
-}
-
-#Pages a {
+#Pages a{
     color: white;
     text-decoration: none;
     padding: 0.5rem;
     border-radius: 6px;
-    border: solid 1px #FFE500;
+    border: solid 2px #FFE500;
+    font-size: large;
 }
-
-#senha {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-}
-
-#botoes {
+#Form {
     width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-#mostrarSenhasContainer {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-}
-
-button {
-    border-radius: 10px;
-    padding: 6px;
-    border: solid 2px #A1D298;
-    background-color: #52A7C8;
-    color: #FFFFFF;
-    width: 70%;
-    cursor: pointer;
-}
-
-button:hover {
-    opacity: 0.9;
+    max-width: 600px;
 }
 
 footer {
@@ -145,7 +53,6 @@ footer {
     color: #ffffff;
     padding: 10px 0;
     position: relative;
-    margin-top: 10px;
 }
 
 footer p {
@@ -154,30 +61,15 @@ footer p {
 
 @media (max-width: 600px) {
     main {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #cor {
-        height: 30vh;
-    }
-
-    #Imagem {
-        margin-top: 10px;
-        margin-left: 5px;
-        width: 350px;
-    }
-
-    #form-container {
-        height: auto;
+        padding: 1rem;
     }
 
     #Form {
-        width: 80%;
+        width: 100%;
+        padding: 1rem;
     }
 
-    #button-container {
-        justify-content: flex-start;
-        margin-left: 10px;
+    footer {
+        padding: 5px 0;
     }
 }

@@ -19,7 +19,7 @@ main {
 #Pt1 {
     background-image: url("../images/Fundo_Login.png");
     color: white;
-    height: 96vh;
+    height: 93.7vh;
 }
 
 #Pt1 h1 {
@@ -133,46 +133,27 @@ footer p {
     margin-bottom: 0;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 600px) {
     main {
         flex-direction: column;
     }
 
-    #P1 {
-        width: 100px;
-        height: 20vh;
+    #Pt1 {
+        height: 42vh;
+    }
+
+    #Pt2 {
+        padding: 0;
     }
 
     form {
-        margin: 0 auto;
-        padding: 1rem;
+        margin-left: 30px;
+        width: 300px;
+        margin-top: 20px;
     }
 
     #Pt1 h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         margin-top: 1rem;
-    }
-}
-
-@media (max-width: 576px) {
-    #P1 {
-        width: 100px;
-        height: 20vh;
-    }
-
-    #Pt1 h1 {
-        font-size: 1.5rem;
-    }
-
-    #logo {
-        width: 100px;
-    }
-
-    form {
-        padding: 0.5rem;
-    }
-
-    button {
-        padding: 8px;
     }
 }

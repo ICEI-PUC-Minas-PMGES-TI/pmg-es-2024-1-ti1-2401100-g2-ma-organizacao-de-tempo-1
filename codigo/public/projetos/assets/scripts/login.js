@@ -13,7 +13,9 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     var username = document.getElementById('usuario').value;
     var password = document.getElementById('senha').value;
 
-    fetch('../../../data/db.json')
+    console.log('Tentando fazer login com:', username, password);
+
+    fetch('/data/user.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro ao carregar o arquivo JSON.');
@@ -21,15 +23,18 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
             return response.json();
         })
         .then(data => {
+            console.log('Dados carregados:', data);
             var users = data.users;
 
             var authenticatedUser = users.find(function (user) {
-                return user.username === username && user.password === password;
+                return (user.username === username || user.email === username) && user.password === password;
             });
 
             if (authenticatedUser) {
-                window.location.href = 'dashboard.html';
+                console.log('Usuário autenticado:', authenticatedUser);
+                window.location.href = '../descricao/description.html';
             } else {
+                console.log('Usuário ou senha incorretos.');
                 displayErrorPopup('Usuário ou senha incorretos.');
             }
         })

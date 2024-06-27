@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 3000;  // Usar variável de ambiente para porta em produção
 const DATA_FILE_PATH = path.join(__dirname, 'data', 'user.json');
+const INFO_FILE_PATH = path.join(__dirname, 'data', 'info.json');
 
 // Middleware para analisar o corpo das requisições JSON
 app.use(bodyParser.json());
@@ -28,10 +29,20 @@ app.get('/data/user.json', (req, res) => {
     });
 });
 
-// Endpoint para atualizar dados do user.json
-app.post('/data/user.json', (req, res) => {
+// Endpoint para obter dados do info.json
+app.get('/data/info.json', (req, res) => {
+    fs.readFile(INFO_FILE_PATH, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).json({ error: 'Failed to read data file' });
+        }
+        res.json(JSON.parse(data));
+    });
+});
+
+// Endpoint para atualizar dados do info.json
+app.post('/data/info.json', (req, res) => {
     const newData = req.body;
-    fs.writeFile(DATA_FILE_PATH, JSON.stringify(newData, null, 2), 'utf8', (err) => {
+    fs.writeFile(INFO_FILE_PATH, JSON.stringify(newData, null, 2), 'utf8', (err) => {
         if (err) {
             return res.status(500).json({ error: 'Failed to write data file' });
         }

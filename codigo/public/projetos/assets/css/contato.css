@@ -38,7 +38,8 @@ img {
 
 #Pages a {
     color: #FFF;
-    border: solid 1px #FFE500;
+    border: solid 2px #FFE500;
+    font-size: large;
     padding: 6px;
     border-radius: 10px;
     text-decoration: none;

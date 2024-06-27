@@ -14,46 +14,52 @@
 <body>
     <header class="bg-info p-3">
         <div class="container d-flex justify-content-between align-items-center">
-            <nav id="Pages" class="d-flex">
-                <a href="#" class="text-white mx-2">Inicio</a>
-                <a href="#" class="text-white mx-2">Rotina</a>
-                <a href="#" class="text-white mx-2">Dicas</a>
-                <a href="#" class="text-white mx-2">Saldo</a>
-                <a href="#" class="text-white mx-2">Contato</a>
+            <nav id="Pages">
+                <a href="../../../index.html">Voltar</a>
             </nav>
-            <div class="d-flex">
-                <a href="#" class="mx-2"><img src="../../assets/images/perfil-de-usuario.png" alt="Imagem de Perfil"
-                        class="img-fluid header-img"></a>
-                <a href="#" class="mx-2"><img src="../../assets/images/config.png" alt="Imagem de Configurações"
-                        class="img-fluid header-img"></a>
-            </div>
         </div>
     </header>
-    <main>
-        <form id="Form">
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" required>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
-            <label for="nascimento">Data de Nascimento</label>
-            <input type="date" name="nascimento" id="nascimento" required>
-            <label for="telefone">Telefone</label>
-            <input type="tel" name="telefone" id="telefone" required maxlength="15">
-            <label for="senha">Senha</label>
-            <input type="password" name="senha" id="senha" required>
-            <label for="confirmarSenha">Confirmar Senha</label>
-            <input type="password" name="confirmarSenha" id="confirmarSenha" required>
-            <div id="mostrarSenhasContainer">
-                <input type="checkbox" id="mostrarSenhas">
-                <label for="mostrarSenhas">Mostrar Senhas</label>
+    <main class="d-flex justify-content-center align-items-center">
+        <form id="Form" class="bg-light p-4 rounded shadow">
+            <h1 class="text-center mb-4">Cadastro de Usuário</h1>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" name="nome" id="nome" class="form-control" required>
             </div>
-            <div id="botoes">
-                <button type="reset">Limpar</button>
-                <button type="submit">Cadastrar</button>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" id="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="nascimento" class="form-label">Data de Nascimento</label>
+                <input type="date" name="nascimento" id="nascimento" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="tel" name="telefone" id="telefone" class="form-control" required maxlength="15">
+            </div>
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" name="senha" id="senha" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="confirmarSenha" class="form-label">Confirmar Senha</label>
+                <input type="password" name="confirmarSenha" id="confirmarSenha" class="form-control" required>
+            </div>
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="mostrarSenhas">
+                <label for="mostrarSenhas" class="form-check-label">Mostrar Senhas</label>
+            </div>
+            <div class="mb-3">
+                <a href="../login/login.html">Já tenho conta</a>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="reset" class="btn btn-secondary">Limpar</button>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
             </div>
         </form>
     </main>
-    <footer class="bg-info text-white text-center p-3">
+    <footer class="bg-info text-white text-center p-3 mt-4">
         <p>@ Todos os direitos reservados</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

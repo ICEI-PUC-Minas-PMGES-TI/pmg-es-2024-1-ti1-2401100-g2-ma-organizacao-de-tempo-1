@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: JSON.stringify({ users: pessoasCadastradas }, null, 2)
                 });
                 alert('Cadastro concluído com sucesso!');
-                window.location.href = './projetos/views/descricao/description.html';
+                window.location.href = '../login/login.html';
             } catch (error) {
                 console.error('Erro ao salvar os dados', error);
                 alert('Erro ao salvar os dados. Tente novamente.');
