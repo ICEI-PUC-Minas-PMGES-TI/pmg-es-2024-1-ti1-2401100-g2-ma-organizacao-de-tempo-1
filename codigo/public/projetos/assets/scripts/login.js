@@ -1,10 +1,6 @@
 document.getElementById('showPassword').addEventListener('change', function () {
     var passwordInput = document.getElementById('senha');
-    if (this.checked) {
-        passwordInput.type = 'text';
-    } else {
-        passwordInput.type = 'password';
-    }
+    passwordInput.type = this.checked ? 'text' : 'password';
 });
 
 document.getElementById('loginForm').addEventListener('submit', function (event) {
@@ -23,25 +19,25 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
         },
         body: JSON.stringify({ username, password })
     })
-    .then(response => {
-        if (!response.ok) {
-            if (response.status === 401) {
-                throw new Error('Usuário ou senha incorretos.');
-            } else {
-                throw new Error('Erro ao tentar fazer login.');
+        .then(response => {
+            if (!response.ok) {
+                if (response.status === 401) {
+                    throw new Error('Usuário ou senha incorretos.');
+                } else {
+                    throw new Error('Erro ao tentar fazer login.');
+                }
             }
-        }
-        return response.json();
-    })
-    .then(authenticatedUser => {
-        console.log('Usuário autenticado:', authenticatedUser);
-        localStorage.setItem('authenticatedUser', JSON.stringify(authenticatedUser));
-        window.location.href = '../descricao/description.html';
-    })
-    .catch(error => {
-        console.error('Erro na requisição:', error);
-        displayErrorPopup(error.message);
-    });
+            return response.json();
+        })
+        .then(authenticatedUser => {
+            console.log('Usuário autenticado:', authenticatedUser);
+            localStorage.setItem('loggedInUser', JSON.stringify(authenticatedUser));
+            window.location.href = '../descricao/description.html';
+        })
+        .catch(error => {
+            console.error('Erro na requisição:', error);
+            displayErrorPopup(error.message);
+        });
 });
 
 function displayErrorPopup(errorMessage) {

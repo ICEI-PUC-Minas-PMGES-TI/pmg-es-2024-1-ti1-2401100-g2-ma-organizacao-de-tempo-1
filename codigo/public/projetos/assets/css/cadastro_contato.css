@@ -35,14 +35,16 @@ img {
     justify-content: space-between;
     width: 200px;
     align-items: center;
+    gap: 10px;
 }
 
 #Pages a {
     color: #FFF;
-    border: solid 1px #FFE500;
+    border: solid 2px #FFE500;
     padding: 6px;
     border-radius: 10px;
     text-decoration: none;
+    font-size: large;
 }
 
 main {

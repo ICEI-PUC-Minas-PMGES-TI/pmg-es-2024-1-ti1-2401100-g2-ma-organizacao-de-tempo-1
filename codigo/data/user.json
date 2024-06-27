@@ -6,7 +6,16 @@
       "email": "user1@example.com",
       "password": "password123",
       "telefone": "1234567890",
-      "nascimento": "1990-01-01"
+      "nascimento": "1990-01-01",
+      "contatos": [
+        {
+          "nome": "Bernardo",
+          "email": "bernardo@gmail.com",
+          "assunto": "Duvidas",
+          "menssagem": "Estou com dúvidas",
+          "id": 1
+        }
+      ]
     },
     {
       "id": 2,
@@ -14,7 +23,8 @@
       "email": "user2@example.com",
       "password": "password456",
       "telefone": "0987654321",
-      "nascimento": "1992-02-02"
+      "nascimento": "1992-02-02",
+      "contatos": []
     },
     {
       "id": 3,
@@ -22,7 +32,8 @@
       "email": "user3@example.com",
       "password": "password789",
       "telefone": "1122334455",
-      "nascimento": "1994-03-03"
+      "nascimento": "1994-03-03",
+      "contatos": []
     },
     {
       "id": 1719512052798,
@@ -30,7 +41,16 @@
       "email": "bernardo@gmail.com",
       "password": "1234",
       "telefone": "(31) 99999-9999",
-      "nascimento": "2000-01-01"
+      "nascimento": "2000-01-01",
+      "contatos": [
+        {
+          "nome": "Bernardo Arantes",
+          "email": "bernardo@gmail.com",
+          "assunto": "Falta de Tempo",
+          "menssagem": "Duvidas de tais",
+          "id": 1
+        }
+      ]
     },
     {
       "id": 1719512482828,
@@ -38,7 +58,24 @@
       "email": "klaus@gmail.com",
       "password": "klaus123",
       "telefone": "(31) 99999-9999",
-      "nascimento": "1090-01-01"
+      "nascimento": "1090-01-01",
+      "contatos": []
+    },
+    {
+      "id": 1719518482590,
+      "username": "User Novo",
+      "email": "user@gmail.com",
+      "password": "12345",
+      "telefone": "(31) 99999-9999",
+      "nascimento": "2008-05-01"
+    },
+    {
+      "id": 1719518958873,
+      "username": "ndfkbnçkfvds",
+      "email": "bvrfsgbdf@ndhhdh.com",
+      "password": "1425",
+      "telefone": "(31) 99999-9999",
+      "nascimento": "2024-06-12"
     }
   ]
 }

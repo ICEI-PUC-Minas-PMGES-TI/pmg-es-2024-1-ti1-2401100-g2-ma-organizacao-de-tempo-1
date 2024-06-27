@@ -36,6 +36,7 @@ app.get('/', (req, res) => {
 app.get('/data/user.json', (req, res) => {
     fs.readFile(DATA_FILE_PATH, 'utf8', (err, data) => {
         if (err) {
+            console.error('Erro ao ler o arquivo user.json:', err);
             return res.status(500).json({ error: 'Failed to read data file' });
         }
         res.json(JSON.parse(data));
@@ -45,9 +46,11 @@ app.get('/data/user.json', (req, res) => {
 // Endpoint para adicionar um novo usuário no user.json
 app.post('/data/user', (req, res) => {
     const newUser = req.body;
+    console.log('Tentativa de adicionar novo usuário:', newUser);
 
     fs.readFile(DATA_FILE_PATH, 'utf8', (err, data) => {
         if (err) {
+            console.error('Erro ao ler o arquivo user.json:', err);
             return res.status(500).json({ error: 'Failed to read data file' });
         }
 
@@ -56,6 +59,7 @@ app.post('/data/user', (req, res) => {
 
         fs.writeFile(DATA_FILE_PATH, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
             if (err) {
+                console.error('Erro ao escrever no arquivo user.json:', err);
                 return res.status(500).json({ error: 'Failed to write data file' });
             }
             res.json({ message: 'User added successfully' });
@@ -66,9 +70,11 @@ app.post('/data/user', (req, res) => {
 // Endpoint para autenticar usuário
 app.post('/data/user/authenticate', (req, res) => {
     const { username, password } = req.body;
+    console.log('Tentativa de autenticação:', { username, password });
 
     fs.readFile(DATA_FILE_PATH, 'utf8', (err, data) => {
         if (err) {
+            console.error('Erro ao ler o arquivo user.json:', err);
             return res.status(500).json({ error: 'Failed to read data file' });
         }
 
@@ -76,9 +82,124 @@ app.post('/data/user/authenticate', (req, res) => {
         const user = jsonData.users.find(user => (user.username === username || user.email === username) && user.password === password);
 
         if (user) {
+            console.log('Usuário autenticado:', user);
             res.json(user);
         } else {
+            console.error('Usuário ou senha inválidos');
             res.status(401).json({ error: 'Invalid username or password' });
+        }
+    });
+});
+
+// Endpoint para adicionar um contato a um usuário específico
+app.post('/data/user/:id/contato', (req, res) => {
+    const userId = parseInt(req.params.id, 10);
+    const novoContato = req.body;
+    console.log(`Tentativa de adicionar contato para o usuário ${userId}:`, novoContato);
+
+    fs.readFile(DATA_FILE_PATH, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo user.json:', err);
+            return res.status(500).json({ error: 'Failed to read data file' });
+        }
+
+        let jsonData = JSON.parse(data);
+        const user = jsonData.users.find(user => user.id === userId);
+
+        if (user) {
+            if (!user.contatos) {
+                user.contatos = [];
+            }
+            const novoIdContato = user.contatos.length ? user.contatos[user.contatos.length - 1].id + 1 : 1;
+            novoContato.id = novoIdContato;
+            user.contatos.push(novoContato);
+
+            fs.writeFile(DATA_FILE_PATH, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+                if (err) {
+                    console.error('Erro ao escrever no arquivo user.json:', err);
+                    return res.status(500).json({ error: 'Failed to write data file' });
+                }
+                res.json({ message: 'Contato added successfully' });
+            });
+        } else {
+            console.error('Usuário não encontrado:', userId);
+            res.status(404).json({ error: 'User not found' });
+        }
+    });
+});
+
+// Endpoint para atualizar um contato de um usuário específico
+app.put('/data/user/:id/contato/:contactId', (req, res) => {
+    const userId = parseInt(req.params.id, 10);
+    const contactId = parseInt(req.params.contactId, 10);
+    const updatedContato = req.body;
+    console.log(`Tentativa de atualizar contato ${contactId} do usuário ${userId}:`, updatedContato);
+
+    fs.readFile(DATA_FILE_PATH, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo user.json:', err);
+            return res.status(500).json({ error: 'Failed to read data file' });
+        }
+
+        let jsonData = JSON.parse(data);
+        const user = jsonData.users.find(user => user.id === userId);
+
+        if (user && user.contatos) {
+            const contactIndex = user.contatos.findIndex(contact => contact.id === contactId);
+            if (contactIndex !== -1) {
+                updatedContato.id = contactId; // Ensure the ID remains the same
+                user.contatos[contactIndex] = updatedContato;
+                fs.writeFile(DATA_FILE_PATH, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+                    if (err) {
+                        console.error('Erro ao escrever no arquivo user.json:', err);
+                        return res.status(500).json({ error: 'Failed to write data file' });
+                    }
+                    res.json({ message: 'Contato updated successfully' });
+                });
+            } else {
+                console.error('Contato não encontrado:', contactId);
+                res.status(404).json({ error: 'Contact not found' });
+            }
+        } else {
+            console.error('Usuário não encontrado:', userId);
+            res.status(404).json({ error: 'User not found' });
+        }
+    });
+});
+
+// Endpoint para deletar um contato de um usuário específico
+app.delete('/data/user/:id/contato/:contactId', (req, res) => {
+    const userId = parseInt(req.params.id, 10);
+    const contactId = parseInt(req.params.contactId, 10);
+    console.log(`Tentativa de deletar contato ${contactId} do usuário ${userId}`);
+
+    fs.readFile(DATA_FILE_PATH, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo user.json:', err);
+            return res.status(500).json({ error: 'Failed to read data file' });
+        }
+
+        let jsonData = JSON.parse(data);
+        const user = jsonData.users.find(user => user.id === userId);
+
+        if (user && user.contatos) {
+            const contactIndex = user.contatos.findIndex(contact => contact.id === contactId);
+            if (contactIndex !== -1) {
+                user.contatos.splice(contactIndex, 1);
+                fs.writeFile(DATA_FILE_PATH, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+                    if (err) {
+                        console.error('Erro ao escrever no arquivo user.json:', err);
+                        return res.status(500).json({ error: 'Failed to write data file' });
+                    }
+                    res.json({ message: 'Contato deleted successfully' });
+                });
+            } else {
+                console.error('Contato não encontrado:', contactId);
+                res.status(404).json({ error: 'Contact not found' });
+            }
+        } else {
+            console.error('Usuário não encontrado:', userId);
+            res.status(404).json({ error: 'User not found' });
         }
     });
 });
@@ -86,9 +207,11 @@ app.post('/data/user/authenticate', (req, res) => {
 // Endpoint para atualizar dados no user.json
 app.post('/data/user.json', (req, res) => {
     const updatedUser = req.body;
+    console.log('Tentativa de atualizar usuário:', updatedUser);
 
     fs.readFile(DATA_FILE_PATH, 'utf8', (err, data) => {
         if (err) {
+            console.error('Erro ao ler o arquivo user.json:', err);
             return res.status(500).json({ error: 'Failed to read data file' });
         }
 
@@ -100,11 +223,13 @@ app.post('/data/user.json', (req, res) => {
 
             fs.writeFile(DATA_FILE_PATH, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
                 if (err) {
+                    console.error('Erro ao escrever no arquivo user.json:', err);
                     return res.status(500).json({ error: 'Failed to write data file' });
                 }
                 res.json({ message: 'Data updated successfully' });
             });
         } else {
+            console.error('Usuário não encontrado:', updatedUser.id);
             res.status(404).json({ error: 'User not found' });
         }
     });
@@ -113,9 +238,11 @@ app.post('/data/user.json', (req, res) => {
 // Endpoint para deletar usuário no user.json
 app.delete('/data/user/:id', (req, res) => {
     const userId = parseInt(req.params.id, 10);
+    console.log(`Tentativa de deletar usuário ${userId}`);
 
     fs.readFile(DATA_FILE_PATH, 'utf8', (err, data) => {
         if (err) {
+            console.error('Erro ao ler o arquivo user.json:', err);
             return res.status(500).json({ error: 'Failed to read data file' });
         }
 
@@ -124,6 +251,7 @@ app.delete('/data/user/:id', (req, res) => {
 
         fs.writeFile(DATA_FILE_PATH, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
             if (err) {
+                console.error('Erro ao escrever no arquivo user.json:', err);
                 return res.status(500).json({ error: 'Failed to write data file' });
             }
             res.json({ message: 'User deleted successfully' });
@@ -135,6 +263,7 @@ app.delete('/data/user/:id', (req, res) => {
 app.get('/data/info.json', (req, res) => {
     fs.readFile(INFO_FILE_PATH, 'utf8', (err, data) => {
         if (err) {
+            console.error('Erro ao ler o arquivo info.json:', err);
             return res.status(500).json({ error: 'Failed to read data file' });
         }
         res.json(JSON.parse(data));
@@ -150,6 +279,7 @@ app.post('/data/info.json', upload.single('image'), (req, res) => {
 
     fs.readFile(INFO_FILE_PATH, 'utf8', (err, data) => {
         if (err) {
+            console.error('Erro ao ler o arquivo info.json:', err);
             return res.status(500).json({ error: 'Failed to read data file' });
         }
 
@@ -158,6 +288,7 @@ app.post('/data/info.json', upload.single('image'), (req, res) => {
 
         fs.writeFile(INFO_FILE_PATH, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
             if (err) {
+                console.error('Erro ao escrever no arquivo info.json:', err);
                 return res.status(500).json({ error: 'Failed to write data file' });
             }
             res.json({ message: 'Data saved successfully' });
