@@ -204,6 +204,119 @@ app.delete('/data/user/:id/contato/:contactId', (req, res) => {
     });
 });
 
+// Endpoint para adicionar uma tarefa a um usuário específico
+app.post('/data/user/:id/tarefa', (req, res) => {
+    const userId = parseInt(req.params.id, 10);
+    const novaTarefa = req.body;
+    console.log(`Tentativa de adicionar tarefa para o usuário ${userId}:`, novaTarefa);
+
+    fs.readFile(DATA_FILE_PATH, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo user.json:', err);
+            return res.status(500).json({ error: 'Failed to read data file' });
+        }
+
+        let jsonData = JSON.parse(data);
+        const user = jsonData.users.find(user => user.id === userId);
+
+        if (user) {
+            if (!user.tarefas) {
+                user.tarefas = [];
+            }
+            const novoIdTarefa = user.tarefas.length ? user.tarefas[user.tarefas.length - 1].id + 1 : 1;
+            novaTarefa.id = novoIdTarefa;
+            user.tarefas.push(novaTarefa);
+
+            fs.writeFile(DATA_FILE_PATH, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+                if (err) {
+                    console.error('Erro ao escrever no arquivo user.json:', err);
+                    return res.status(500).json({ error: 'Failed to write data file' });
+                }
+                res.json({ message: 'Tarefa added successfully' });
+            });
+        } else {
+            console.error('Usuário não encontrado:', userId);
+            res.status(404).json({ error: 'User not found' });
+        }
+    });
+});
+
+// Endpoint para atualizar uma tarefa de um usuário específico
+app.put('/data/user/:id/tarefa/:taskId', (req, res) => {
+    const userId = parseInt(req.params.id, 10);
+    const taskId = parseInt(req.params.taskId, 10);
+    const updatedTarefa = req.body;
+    console.log(`Tentativa de atualizar tarefa ${taskId} do usuário ${userId}:`, updatedTarefa);
+
+    fs.readFile(DATA_FILE_PATH, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo user.json:', err);
+            return res.status(500).json({ error: 'Failed to read data file' });
+        }
+
+        let jsonData = JSON.parse(data);
+        const user = jsonData.users.find(user => user.id === userId);
+
+        if (user && user.tarefas) {
+            const taskIndex = user.tarefas.findIndex(tarefa => tarefa.id === taskId);
+            if (taskIndex !== -1) {
+                updatedTarefa.id = taskId; // Ensure the ID remains the same
+                user.tarefas[taskIndex] = updatedTarefa;
+                fs.writeFile(DATA_FILE_PATH, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+                    if (err) {
+                        console.error('Erro ao escrever no arquivo user.json:', err);
+                        return res.status(500).json({ error: 'Failed to write data file' });
+                    }
+                    res.json({ message: 'Tarefa updated successfully' });
+                });
+            } else {
+                console.error('Tarefa não encontrada:', taskId);
+                res.status(404).json({ error: 'Task not found' });
+            }
+        } else {
+            console.error('Usuário não encontrado:', userId);
+            res.status(404).json({ error: 'User not found' });
+        }
+    });
+});
+
+// Endpoint para deletar uma tarefa de um usuário específico
+app.delete('/data/user/:id/tarefa/:taskId', (req, res) => {
+    const userId = parseInt(req.params.id, 10);
+    const taskId = parseInt(req.params.taskId, 10);
+    console.log(`Tentativa de deletar tarefa ${taskId} do usuário ${userId}`);
+
+    fs.readFile(DATA_FILE_PATH, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo user.json:', err);
+            return res.status(500).json({ error: 'Failed to read data file' });
+        }
+
+        let jsonData = JSON.parse(data);
+        const user = jsonData.users.find(user => user.id === userId);
+
+        if (user && user.tarefas) {
+            const taskIndex = user.tarefas.findIndex(tarefa => tarefa.id === taskId);
+            if (taskIndex !== -1) {
+                user.tarefas.splice(taskIndex, 1);
+                fs.writeFile(DATA_FILE_PATH, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+                    if (err) {
+                        console.error('Erro ao escrever no arquivo user.json:', err);
+                        return res.status(500).json({ error: 'Failed to write data file' });
+                    }
+                    res.json({ message: 'Tarefa deleted successfully' });
+                });
+            } else {
+                console.error('Tarefa não encontrada:', taskId);
+                res.status(404).json({ error: 'Task not found' });
+            }
+        } else {
+            console.error('Usuário não encontrado:', userId);
+            res.status(404).json({ error: 'User not found' });
+        }
+    });
+});
+
 // Endpoint para atualizar dados no user.json
 app.post('/data/user.json', (req, res) => {
     const updatedUser = req.body;

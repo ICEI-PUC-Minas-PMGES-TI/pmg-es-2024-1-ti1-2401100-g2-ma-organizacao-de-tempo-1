@@ -2,7 +2,6 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  display: flexbox;
 }
 
 header {
@@ -39,59 +38,61 @@ img {
   height: auto;
 }
 
-#Crono {
-  height: 100px;
-  width: 100px;
-}
-
-#CronoSee {
-  width: 450px;
-  height: 170px;
+#descriptionList {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: auto;
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-left: auto;
-}
-
-#botaoPopup {
-  height: 155px;
-  width: 155px;
-  border-radius: 64px;
-  background-color: rgb(17, 185, 236);
-  align-items: center;
-  display: inline-block;
-  margin-right: 15px;
-}
-
-#CronoContent {
-  width: 100%;
-  height: 160px;
-  display: flexbox;
+  flex-wrap: wrap;
   justify-content: center;
-  background-color: aqua;
-  border-radius: 120px;
-  align-content: center;
-  padding: auto;
-  box-sizing: border-box;
+  gap: 1rem;
 }
 
-#Content {
-  margin-left: 25px;
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 1000;
 }
 
-#PopUp {
-  position: relative;
-  width: 200px;
-  height: 100px;
-  text-align: center;
-  line-height: 100px;
+.popup-content {
   background-color: #fff;
-  border: 8px solid #666;
-  border-radius: 30px;
-  box-shadow: 2px 2px 4px #888;
+  border: 2px solid #888;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  header .container {
+    flex-direction: column;
+  }
+
+  #Pages {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .d-flex.flex-basis-100.justify-content-center {
+    margin-top: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  #descriptionList {
+    flex-direction: column;
+  }
 }

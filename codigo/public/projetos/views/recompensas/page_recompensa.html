@@ -12,33 +12,34 @@
 
 <body>
   <header>
-    <div class="container d-flex justify-content-between align-items-center">
-      <nav id="Pages">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <nav id="Pages" class="flex-basis-100 text-center mb-1">
         <a href="../descricao/description.html">Descrição</a>
         <a href="../recompensas/page_recompensa.html">Recompensas</a>
         <a href="../tarefas/calendario.html">Tarefas</a>
         <a href="../contato/contato_user.html">Contato</a>
       </nav>
-    </div>
-    <div class="d-flex">
-      <a href="../cadastro_usuario/editar_usuario.html" class="mx-2"><img
-          src="../../assets/images/perfil-de-usuario.png" alt="Imagem de Perfil" class="header-img"></a>
+      <div class="d-flex flex-basis-100 justify-content-center">
+        <a href="../cadastro_usuario/editar_usuario.html" class="mx-2"><img
+            src="../../assets/images/perfil-de-usuario.png" alt="Imagem de Perfil" class="header-img"></a>
+      </div>
     </div>
   </header>
-  <main>
+  <main class="container text-center mt-4">
     <h1>Olá, este é o seu saldo atual de CronoCoins!</h1>
-    <span class="cronocoin"><img src="../../assets/images/cronocoin.png" width="30px" height="30px"
-        alt="Moeda-Cronocoin"></span>
-    <div id="saldocoins" class="saldocoins"></div>
-    <p1>Como conseguir CronoCoins?</p1>
+    <div class="d-flex justify-content-center align-items-center mt-3">
+      <span class="cronocoin"><img src="../../assets/images/cronocoin.png" width="30px" height="30px"
+          alt="Moeda-Cronocoin"></span>
+      <div id="saldocoins" class="saldocoins ms-2"></div>
+    </div>
+    <h2 class="mt-4">Como conseguir CronoCoins?</h2>
     <div class="passos">
-      <ul>
-        <li> Conclua as suas tarefas.</li>
-        <li> Indique o CronoFlex para outros amigos.</li>
-        <li> Conclua todas as tarefas durante 7 dias seguidos!</li>
+      <ul class="list-unstyled">
+        <li>Conclua as suas tarefas.</li>
+        <li>Indique o CronoFlex para outros amigos.</li>
+        <li>Conclua todas as tarefas durante 7 dias seguidos!</li>
       </ul>
     </div>
-    </footer>
   </main>
   <footer class="bg-info text-white text-center p-3 mt-4">
     <p>@ Todos os direitos reservados</p>

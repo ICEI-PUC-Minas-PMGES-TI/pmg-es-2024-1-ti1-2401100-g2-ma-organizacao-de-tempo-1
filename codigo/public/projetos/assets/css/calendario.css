@@ -10,9 +10,18 @@
     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
 }
 
-
 header {
     background-color: rgba(113, 201, 236, 255);
+    padding: 10px;
+}
+
+#Pages a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: solid 2px #FFE500;
+    font-size: large;
 }
 
 img {
@@ -28,7 +37,6 @@ img {
 #calendario {
     width: 100%;
 }
-
 
 #datas {
     margin: auto;
@@ -47,7 +55,6 @@ img {
     flex-wrap: wrap;
     margin: 0;
 }
-
 
 #dates li.inactive {
     color: #c2c1c1b6;
@@ -143,9 +150,8 @@ img {
 }
 
 #tarefas table {
-    display: flex;
-    flex-direction: column;
-
+    width: 100%;
+    margin-top: 20px;
 }
 
 #tarefas tbody {
@@ -169,7 +175,6 @@ img {
     color: #888;
 }
 
-
 #tarefas tr {
     display: flex;
     justify-content: space-evenly;
@@ -187,7 +192,6 @@ img {
     align-items: center;
 }
 
-
 #tarefas button {
     padding: 5px;
     background-color: rgba(113, 201, 236, 255);
@@ -198,8 +202,6 @@ img {
     transition: all .3s;
     width: 110px;
 }
-
-
 
 @media screen and (max-width: 600px) {
     #botao-cadastrar {
