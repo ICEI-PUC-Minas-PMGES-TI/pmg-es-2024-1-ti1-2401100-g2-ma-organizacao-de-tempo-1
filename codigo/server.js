@@ -52,17 +52,32 @@ app.get('/data/info.json', (req, res) => {
     });
 });
 
-// Endpoint para atualizar dados do info.json
+// Endpoint para adicionar dados ao info.json
 app.post('/data/info.json', upload.single('image'), (req, res) => {
-    const newData = req.body;
+    const newDescription = req.body;
     if (req.file) {
-        newData.image = `/projetos/assets/images/${req.file.filename}`;
+        newDescription.image = `/projetos/assets/images/${req.file.filename}`;
     }
-    fs.writeFile(INFO_FILE_PATH, JSON.stringify(newData, null, 2), 'utf8', (err) => {
+
+    fs.readFile(INFO_FILE_PATH, 'utf8', (err, data) => {
         if (err) {
-            return res.status(500).json({ error: 'Failed to write data file' });
+            return res.status(500).json({ error: 'Failed to read data file' });
         }
-        res.json({ message: 'Data saved successfully' });
+
+        let existingData = JSON.parse(data);
+
+        if (!Array.isArray(existingData.descriptions)) {
+            existingData.descriptions = [];
+        }
+
+        existingData.descriptions.push(newDescription);
+
+        fs.writeFile(INFO_FILE_PATH, JSON.stringify(existingData, null, 2), 'utf8', (err) => {
+            if (err) {
+                return res.status(500).json({ error: 'Failed to write data file' });
+            }
+            res.json({ message: 'Data saved successfully' });
+        });
     });
 });
 

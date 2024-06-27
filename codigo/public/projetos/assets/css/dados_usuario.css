@@ -10,6 +10,30 @@ body {
     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #71C9EC;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+#Pages {
+    display: flex;
+    gap: 1rem;
+}
+
+#Pages a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: solid 2px #FFE500;
+    font-size: large;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -111,14 +135,6 @@ button#voltar:hover {
     opacity: 0.9;
 }
 
-footer {
-    background-color: #78c5d6;
-    text-align: center;
-    color: #ffffff;
-    padding: 10px 0;
-    position: relative;
-    margin-top: 10px;
-}
 
 footer p {
     margin: 0;

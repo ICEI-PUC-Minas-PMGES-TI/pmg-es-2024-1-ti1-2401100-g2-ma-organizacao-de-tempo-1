@@ -16,7 +16,7 @@ function fetchDescriptions() {
             return response.json();
         })
         .then(data => {
-            descriptions = data.descriptions;
+            descriptions = data.descriptions || [];
             displayDescriptions();
         })
         .catch(error => {
@@ -53,8 +53,7 @@ function registerDescription() {
             })
             .then(data => {
                 console.log('Dados salvos com sucesso:', data);
-                descriptions.push(newDescription);
-                displayDescriptions();
+                fetchDescriptions(); // Reload descriptions
 
                 // Clear the form fields
                 document.getElementById('descriptionTitle').value = '';
@@ -90,8 +89,8 @@ function displayDescriptions() {
 
     descriptionList.innerHTML = currentDescriptions.map((desc, index) => `
         <div class="container d-flex flex-column align-items-center justify-content-center">
-            <h3>${desc.title}</h3>
-            <p>${desc.text}</p>
+            <h3>${desc.title || 'Sem título'}</h3>
+            <p>${desc.text || 'Sem descrição'}</p>
             ${desc.image ? `<img src="${desc.image}" alt="${desc.title}" class="img-fluid" style="max-width: 100%; height: auto;">` : ''}
             <div>
                 <button class="btn btn-danger" onclick="removeDescription(${start + index})">Remover</button>
@@ -134,4 +133,26 @@ function removeDescription(index) {
     descriptions.splice(index, 1);
     saveDescriptions();
     displayDescriptions();
+}
+
+function saveDescriptions() {
+    fetch('/data/info.json', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ descriptions })
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao salvar os dados.');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Dados salvos com sucesso:', data);
+        })
+        .catch(error => {
+            console.error('Erro ao salvar os dados:', error);
+        });
 }
