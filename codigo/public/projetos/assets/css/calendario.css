@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+header {
+    background-color: rgba(113, 201, 236, 255);
+    padding: 10px;
+}
+
+#Pages a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: solid 2px #FFE500;
+    font-size: large;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header-img {
+    max-width: 40px;
+    height: auto;
+}
+
+#calendario {
+    width: 100%;
+}
+
+#datas {
+    margin: auto;
+    width: 98%;
+    max-width: 380px;
+}
+
+#datas ul {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#dates {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+#dates li.inactive {
+    color: #c2c1c1b6;
+}
+
+#bordas {
+    transition: all .3s;
+}
+
+#bordas:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#bordas:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#datas ul li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: calc(100% / 7);
+    margin-top: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+#dates ul {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#dia:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#dia:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+#botao-cadastrar {
+    background-color: rgba(113, 201, 236, 255);
+    color: white;
+    padding: 5px;
+    border-radius: 10rem;
+    border-color: rgb(245, 205, 27);
+    transition: all .3s;
+}
+
+#botao-cadastrar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#botao-cadastrar:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#mes-anterior,
+#mes-seguinte {
+    transition: all .2s;
+}
+
+#mes-anterior:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#mes-anterior:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#mes-seguinte:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#mes-anterior:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#tarefas table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#tarefas tbody {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 10px;
+}
+
+#tarefas td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.tarefa.concluida td {
+    text-decoration: line-through;
+    color: #888;
+}
+
+#tarefas tr {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#botoes-crud {
+    display: flex;
+    flex-direction: column;
+}
+
+.tarefa {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tarefas button {
+    padding: 5px;
+    background-color: rgba(113, 201, 236, 255);
+    color: white;
+    padding: 5px;
+    border-radius: 10rem;
+    border-color: rgb(245, 205, 27);
+    transition: all .3s;
+    width: 110px;
+}
+
+@media screen and (max-width: 600px) {
+    #botao-cadastrar {
+        font-size: 14px;
+    }
+}

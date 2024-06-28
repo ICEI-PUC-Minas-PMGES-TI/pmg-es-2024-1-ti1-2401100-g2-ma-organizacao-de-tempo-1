@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "email": "user1@example.com",
+      "password": "password123",
+      "telefone": "1234567890",
+      "nascimento": "1990-01-01",
+      "contatos": [],
+      "tarefas": []
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "email": "user2@example.com",
+      "password": "password456",
+      "telefone": "0987654321",
+      "nascimento": "1992-02-02",
+      "contatos": [],
+      "tarefas": []
+    },
+    {
+      "id": 3,
+      "username": "user3",
+      "email": "user3@example.com",
+      "password": "password789",
+      "telefone": "1122334455",
+      "nascimento": "1994-03-03",
+      "contatos": [],
+      "tarefas": []
+    },
+    {
+      "id": 1719512052798,
+      "username": "Bernardo Arantes",
+      "email": "bernardo@gmail.com",
+      "password": "1234",
+      "telefone": "(31) 99999-9999",
+      "nascimento": "2000-01-01",
+      "contatos": [
+        {
+          "nome": "Bernardo Arantes",
+          "email": "bernardo@gmail.com",
+          "assunto": "Falta de Tempo",
+          "menssagem": "Duvidas de tais",
+          "id": 1
+        }
+      ],
+      "tarefas": []
+    },
+    {
+      "id": 1719512482828,
+      "username": "klaus mikaelson",
+      "email": "klaus@gmail.com",
+      "password": "klaus123",
+      "telefone": "(31) 99999-9999",
+      "nascimento": "1090-01-01",
+      "contatos": [],
+      "tarefas": []
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #71C9EC;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+#Pages {
+  display: flex;
+  gap: 1rem;
+}
+
+#Pages a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: solid 2px #FFE500;
+  font-size: large;
+}
+
+img {
+  max-width: 100px;
+  height: auto;
+}
+
+.header-img {
+  max-width: 40px;
+  height: auto;
+}
+
+#descriptionList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fff;
+  border: 2px solid #888;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  header .container {
+    flex-direction: column;
+  }
+
+  #Pages {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .d-flex.flex-basis-100.justify-content-center {
+    margin-top: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  #descriptionList {
+    flex-direction: column;
+  }
+}
