@@ -262,11 +262,11 @@ A divisão de tarefas foi que cada integrante ficará com 2 funcionalidades, sej
 > (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
 > item textualmente comentando e complementando o que está apresentado
 > nas imagens.
-
+>
 > Tendo em vista que o projeto é uma aplicação Web, as tecnologias
 > usadas para programar foram:
 > HTML, CSS e Javascript, com alguns usos do framework Bootstrap
-
+>
 > A IDE escolhida para programar a solução foi:
 > VisualCode
 
