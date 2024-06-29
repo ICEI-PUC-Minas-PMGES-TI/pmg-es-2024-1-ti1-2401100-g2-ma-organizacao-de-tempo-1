@@ -146,7 +146,7 @@ Nesta área do relatório serão apresentadas todo o Projeto de Interface, inclu
 > fazer junto com os membros de sua equipe.
 
 
-![User Flow][Fluxo de usuario - Cronoflex](https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2401100-g2-ma-organizacao-de-tempo-1/assets/111539495/6a79be7a-00c8-4f52-bb23-eb9b112e814f)
+![Fluxo de usuario - Cronoflex]()
 
 > **Links Úteis**:
 > - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
