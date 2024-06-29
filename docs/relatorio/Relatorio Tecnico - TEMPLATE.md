@@ -146,7 +146,7 @@ Nesta área do relatório serão apresentadas todo o Projeto de Interface, inclu
 > fazer junto com os membros de sua equipe.
 
 
-![Fluxo de usuario - Cronoflex]()
+![Fluxo de usuario - Cronoflex](images/Fluxo de usuario - Cronoflex.png)
 
 > **Links Úteis**:
 > - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
