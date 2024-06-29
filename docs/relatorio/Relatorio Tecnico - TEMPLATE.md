@@ -204,35 +204,22 @@ A divisão de tarefas foi que cada integrante ficará com 2 funcionalidades, sej
 |-----------|-------------------------|---------------|
 |Processo de Design Thinkgin  | Miro | [ https://miro.com](https://miro.com/app/board/uXjVNiWnu8Y=/) | 
 |Repositório de código | GitHub | [https://github.com](https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2401100-g2-ma-organizacao-de-tempo-1) | 
-|Hospedagem do site | Vercel |  [https://vercel.com](https://pmg-es-2024-1-ti1-2401100-g2-ma-organizacao-de-tempo-1.vercel.app/) | 
+|Hospedagem do site | Netify |  [https://netlify.com](https://cronoflex.netlify.app/) | 
 |Protótipo Interativo | Figma | [https://figma.com](https://www.figma.com/design/iQMHstsrCU4ADBZIrXrY6j/CronoFlex?node-id=59-74&t=zWeQZHOEgOLQZW5d-1) | 
 
 ## Controle de Versão
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Discuta como a configuração do projeto foi feita na ferramenta de
-> versionamento escolhida. Exponha como a gerência de tags, merges,
-> commits e branchs é realizada. Discuta como a gerência de issues foi
-> realizada.
-> A ferramenta de controle de versão adotada no projeto foi o
-> [Git](https://git-scm.com/), sendo que o [Github](https://github.com)
-> foi utilizado para hospedagem do repositório `upstream`.
-> 
-> O projeto segue a seguinte convenção para o nome de branchs:
-> 
-> - `master`: versão estável já testada do software
-> - `unstable`: versão já testada do software, porém instável
-> - `testing`: versão em testes do software
-> - `dev`: versão de desenvolvimento do software
-> 
-> Quanto à gerência de issues, o projeto adota a seguinte convenção para
-> etiquetas:
-> 
-> - `bugfix`: uma funcionalidade encontra-se com problemas
-> - `enhancement`: uma funcionalidade precisa ser melhorada
-> - `feature`: uma nova funcionalidade precisa ser introduzida
+> Utilizamos a ferramenta de vercionamento GitHub, e o app `Netlify` para hospedagem.
+> Seguimos a seguinte legenda para as branchs:
 >
+> - `master`: versão estável já testada do software
+> - `integration`: versão de testes e instável
+> - `nome-desenvolvedor`: versão de desenvolvimento do software com o nome do autor que a desenvolveu
+>
+> Cada integrante realizava suas tarefas em suas branches especificas e depois as mesmas eram integradas e verificadas
+> para uso dentro da feeamenta como um todo.
+> Branches que tinham problemas não resolviveis ou de alta complexidade era verificadas e corrigidas se possivel.
+> 
 > **Links Úteis**:
 > - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
 > - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
@@ -253,19 +240,6 @@ A divisão de tarefas foi que cada integrante ficará com 2 funcionalidades, sej
 
 ......  COLOQUE AQUI O SEU TEXTO ......
 
-> Descreva aqui qual(is) tecnologias você vai usar para resolver o seu
-> problema, ou seja, implementar a sua solução. Liste todas as
-> tecnologias envolvidas, linguagens a serem utilizadas, serviços web,
-> frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-> Apresente também uma figura explicando como as tecnologias estão
-> relacionadas ou como uma interação do usuário com o sistema vai ser
-> conduzida, por onde ela passa até retornar uma resposta ao usuário.
-> 
-> Inclua os diagramas de User Flow, esboços criados pelo grupo
-> (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
-> item textualmente comentando e complementando o que está apresentado
-> nas imagens.
->
 > Tendo em vista que o projeto é uma aplicação Web, as tecnologias
 > usadas para programar foram:
 > HTML, CSS e Javascript, com alguns usos do framework Bootstrap
