@@ -1,0 +1,86 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #71C9EC;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+#Pages {
+    display: flex;
+    gap: 1rem;
+}
+
+#Pages a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: solid 2px #FFE500;
+    font-size: large;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header-img {
+    max-width: 40px;
+    height: auto;
+}
+
+.cronocoin img {
+    width: 30px;
+    height: 30px;
+}
+
+#saldocoins {
+    font-size: 2rem;
+}
+
+.passos ul {
+    padding: 0;
+    list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    header .container {
+        flex-direction: column;
+    }
+
+    #Pages {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .d-flex.flex-basis-100.justify-content-center {
+        margin-top: 1rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .cronocoin,
+    #saldocoins {
+        font-size: 1.5rem;
+    }
+
+    .passos ul {
+        text-align: left;
+    }
+}
