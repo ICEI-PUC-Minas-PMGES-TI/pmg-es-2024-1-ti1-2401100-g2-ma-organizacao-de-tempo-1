@@ -233,15 +233,10 @@ A divisão de tarefas foi que cada integrante ficará com 2 funcionalidades, sej
 
 ## Arquitetura da solução
 
-......  COLOQUE AQUI O SEU TEXTO E O DIAGRAMA DE ARQUITETURA .......
-
-> Inclua um diagrama da solução e descreva os módulos e as tecnologias
-> que fazem parte da solução. Discorra sobre o diagrama.
-> 
-> **Exemplo do diagrama de Arquitetura**:
-> 
-> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
-
+> Utilizamos o app Netlify para hospedar a página, facilitando assim a visão da página em um ambiente
+> real.
+>
+> ![Arquitetura usada](images/Arquitetura.png)
 
 # Avaliação da Aplicação
 
