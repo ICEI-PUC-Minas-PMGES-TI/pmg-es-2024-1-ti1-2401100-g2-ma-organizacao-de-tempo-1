@@ -10,11 +10,11 @@
 ## Participantes
 
 Os membros do grupo são: 
-> - Arthur Modesto Couto
-> - Bernardo Pace Pereira Arantes
-> - Italo Vinhas Antunes Sulva
-> - João Paulo Gobira Lopes Costa
-> - João Victor dos Santos Nogueira
+ - Arthur Modesto Couto
+ - Bernardo Pace Pereira Arantes
+ - Italo Vinhas Antunes Sulva
+ - João Paulo Gobira Lopes Costa
+ - João Victor dos Santos Nogueira
 
 # Estrutura do Documento
 
