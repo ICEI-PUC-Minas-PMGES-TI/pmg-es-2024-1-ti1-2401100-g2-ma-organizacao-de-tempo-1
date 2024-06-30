@@ -1,11 +1,11 @@
 # Informações do Projeto
 `TÍTULO DO PROJETO`  
 
-CronoFlex
+**CronoFlex**
 
 `CURSO` 
 
-Engenharia de Software - CAMPUS CORAÇÃO EUCARÍSTICO - NOITE
+**Engenharia de Software - CAMPUS CORAÇÃO EUCARÍSTICO - NOITE**
 
 ## Participantes
 
@@ -134,29 +134,11 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 # Projeto de Interface
 
-Nesta área do relatório serão apresentadas todo o Projeto de Interface, incluindo o User Flow e os Wireframes. Na interface, o objetivo é que a solução seja intuitiva, responsiva e leve, para que o máximo de usuários de diferentes dispositivos consigam usar o CronoFlex.
+: Na interface, o objetivo é que a solução seja intuitiva, responsiva e leve, para que o máximo de usuários de diferentes dispositivos consigam usar o CronoFlex.
 
 ## User Flow
 
-......  INCLUA AQUI O DIAGRAMA COM O FLUXO DO USUÁRIO NA APLICAÇÃO ......
-
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor
-> mapear todo fluxo de telas do site ou app. Essa técnica funciona
-> para alinhar os caminhos e as possíveis ações que o usuário pode
-> fazer junto com os membros de sua equipe.
-
-
 ![Fluxo de usuario - Cronoflex](images/UserFlow.png)
-
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
->
-> **Exemplo**:
-> 
-> ![Exemplo de UserFlow](images/userflow.jpg)
-
 
 ## Wireframes
 
@@ -204,7 +186,7 @@ A divisão de tarefas foi que cada integrante ficará com 2 funcionalidades, sej
 |-----------|-------------------------|---------------|
 |Processo de Design Thinkgin  | Miro | [ https://miro.com](https://miro.com/app/board/uXjVNiWnu8Y=/) | 
 |Repositório de código | GitHub | [https://github.com](https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2401100-g2-ma-organizacao-de-tempo-1) | 
-|Hospedagem do site | Netify |  [https://netlify.com](https://cronoflex.netlify.app/) | 
+|Hospedagem do site | Netlify |  [https://netlify.com](https://cronoflex.netlify.app/) | 
 |Protótipo Interativo | Figma | [https://figma.com](https://www.figma.com/design/iQMHstsrCU4ADBZIrXrY6j/CronoFlex?node-id=59-74&t=zWeQZHOEgOLQZW5d-1) | 
 
 ## Controle de Versão
@@ -263,25 +245,38 @@ A divisão de tarefas foi que cada integrante ficará com 2 funcionalidades, sej
 
 # Avaliação da Aplicação
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Apresente os cenários de testes utilizados na realização dos testes da
-> sua aplicação. Escolha cenários de testes que demonstrem os requisitos
-> sendo satisfeitos.
+> Os testes realizados envolviam verificar se o usuário cadastrado estava realmente salvo
+> dentro do local storage da aplicação.
+>
+> Também verificar se as funcionalidades (cadastro de tarefas, listagem de tarefas, conclusão e compensação)
+> estavam plenamente funcionais.
+>
+> Verificar também se o cadastro de novos usuários estava funcional. realmente salvando os dados do usuário.
+>
+> Verificar se a funcionalidade de alterar dados do perfil realmente permite alterar e salvar os dados
+> do perfilo do usuário.
 
 ## Plano de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Enumere quais cenários de testes foram selecionados para teste. Neste
-> tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo
-> de usuários que foi escolhido para participar do teste e as
-> ferramentas utilizadas.
-> 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
+> Os cenários de testes escolhidos foram os seguintes:
+>
+> **Teste de cadastro**
+> Nesse cenário, testamos se a aplicação permitia a um novo usuário se cadastrar e se
+> as telas com as outras funcionalidades estavam acessíveis a ele.
+>
+> **Teste de registro de tarefa**
+> Nesse cenário, após logar com um usuário válido, testamos se a aplicação realmente
+> registrava e salvava as tarefas que o mesmo incluia em seu calendário, também
+> verificando se a mesma era marcada como concluída.
+>
+> **Teste de alteração de perfil**
+> Neste cenário, após logar com um usuário válido, verificamos se era possível
+> alterar os dados presentes no perfil do mesmo e salvar de forma que os
+> dados poderiam ser alterados de forma simples pelon próprio usuário.
+>
+> **Teste de listagem de tarefas**
+> Nesse cenário, testamos se as tarefas apareceriam listadas na aplicação se
+> estivesse logada com um usuário válido e se fossem as tarefas daquele usuário.
 
 ## Ferramentas de Testes (Opcional)
 
@@ -295,13 +290,14 @@ A divisão de tarefas foi que cada integrante ficará com 2 funcionalidades, sej
 
 ## Registros de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Discorra sobre os resultados do teste. Ressaltando pontos fortes e
-> fracos identificados na solução. Comente como o grupo pretende atacar
-> esses pontos nas próximas iterações. Apresente as falhas detectadas e
-> as melhorias geradas a partir dos resultados obtidos nos testes.
-
+> Dentro dos cenários de testes que realizamos, conseguimos realizar todas as tarefas
+> sem maiores problemas, porém inicialmente tivemos que verificar se os usuarios realmente
+> conseguiam acessar todas as funcionalidades perfeitamente se fossem validados.
+>
+> Também verificamos se as tarefas eram salvas apenas para aquele usuário e
+> se eram listados perfeitamente.
+>
+> As funcionalidades proncipais funcionaram perfeitamente no geral.
 
 # Referências
 
