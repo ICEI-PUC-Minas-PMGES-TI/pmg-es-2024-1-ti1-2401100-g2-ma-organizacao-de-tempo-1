@@ -1,31 +1,33 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: Cronoflex
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: Modesto Couto
+    given-names: Arthur
+  - family-names: Pace Pereira Arantes
+    given-names: Bernardo
+  - family-names: Vinhas Antunes Sulva
+    given-names: Italo
+  - family-names: Gobira Lopes Costa
+    given-names: João Paulo
+  - family-names: Santos Nogueira
+    given-names: João Victor
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Boechat Seufitelli
+    given-names: Danilo
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Faria Barros
+    given-names: Diego Augusto
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Alves Nogueira
+    given-names: Simone
 keywords:
-  - 
-  - 
-repository-code: 
+  - Organização
+  - Rotina
+repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2401100-g2-ma-organizacao-de-tempo-1
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2022-07-14
+date-released: 2024-06-30
