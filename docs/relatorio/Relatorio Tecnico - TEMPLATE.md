@@ -186,7 +186,7 @@ A divisão de tarefas foi que cada integrante ficará com 2 funcionalidades, sej
 |-----------|-------------------------|---------------|
 |Processo de Design Thinkgin  | Miro | [ https://miro.com](https://miro.com/app/board/uXjVNiWnu8Y=/) | 
 |Repositório de código | GitHub | [https://github.com](https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2401100-g2-ma-organizacao-de-tempo-1) | 
-|Hospedagem do site | Netlify |  [https://netlify.com](https://cronoflex.netlify.app/) | 
+|Hospedagem do site | Netlify |  [https://netlify.com](https://cronoflex.netlify.app/projetos/views/descricao/description.html) | 
 |Protótipo Interativo | Figma | [https://figma.com](https://www.figma.com/design/iQMHstsrCU4ADBZIrXrY6j/CronoFlex?node-id=59-74&t=zWeQZHOEgOLQZW5d-1) | 
 
 ## Controle de Versão
