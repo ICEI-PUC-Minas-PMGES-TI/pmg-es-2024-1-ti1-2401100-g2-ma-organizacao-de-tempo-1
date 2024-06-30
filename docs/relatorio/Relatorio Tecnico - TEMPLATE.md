@@ -191,96 +191,96 @@ A divisão de tarefas foi que cada integrante ficará com 2 funcionalidades, sej
 
 ## Controle de Versão
 
-> Utilizamos a ferramenta de vercionamento GitHub, e o app `Netlify` para hospedagem.
-> Seguimos a seguinte legenda para as branchs:
->
-> - `master`: versão estável já testada do software
-> - `integration`: versão de testes e instável
-> - `nome-desenvolvedor`: versão de desenvolvimento do software com o nome do autor que a desenvolveu
->
-> Cada integrante realizava suas tarefas em suas branches especificas e depois as mesmas eram integradas e verificadas
-> para uso dentro da feeamenta como um todo.
-> Branches que tinham problemas não resolviveis ou de alta complexidade era verificadas e corrigidas se possivel.
-> 
-> **Exemplo - GitHub Feature Branch Workflow**:
->
-> ![Exemplo de Wireframe](images/Github-Workflow.png)
+Utilizamos a ferramenta de vercionamento GitHub, e o app `Netlify` para hospedagem.
+Seguimos a seguinte legenda para as branchs:
+
+- `master`: versão estável já testada do software
+- `integration`: versão de testes e instável
+- `nome-desenvolvedor`: versão de desenvolvimento do software com o nome do autor que a desenvolveu
+
+Cada integrante realizava suas tarefas em suas branches especificas e depois as mesmas eram integradas e verificadas
+para uso dentro da feeamenta como um todo.
+Branches que tinham problemas não resolviveis ou de alta complexidade era verificadas e corrigidas se possivel.
+
+**Exemplo - GitHub Feature Branch Workflow**:
+
+![Exemplo de Wireframe](images/Github-Workflow.png)
 
 # **############## SPRINT 1 ACABA AQUI #############**
 
 
 # Projeto da Solução
 
-> O projeto da solução foi realizado no figma, sendo mais tarde passado para as linguagens
-> utilizadas para confeccionar uma página web.
+O projeto da solução foi realizado no figma, sendo mais tarde passado para as linguagens
+utilizadas para confeccionar uma página web.
 
 ## Tecnologias Utilizadas
 
-> Tendo em vista que o projeto é uma aplicação Web, as tecnologias
-> usadas para programar foram:
-> HTML, CSS e Javascript, com alguns usos do framework Bootstrap
->
-> A IDE escolhida para programar a solução foi:
-> VisualCode
->
-> Utilizamos o framework Bootstrap para facilitar a implementação e o uso de responsividade
+Tendo em vista que o projeto é uma aplicação Web, as tecnologias
+usadas para programar foram:
+HTML, CSS e Javascript, com alguns usos do framework Bootstrap
+
+A IDE escolhida para programar a solução foi:
+VisualCode
+
+Utilizamos o framework Bootstrap para facilitar a implementação e o uso de responsividade
 
 ## Arquitetura da solução
 
-> Utilizamos o app Netlify para hospedar a página, facilitando assim a visão da página em um ambiente
-> real.
->
-> ![Arquitetura usada](images/Arquitetura.png)
+Utilizamos o app Netlify para hospedar a página, facilitando assim a visão da página em um ambiente
+real.
+
+![Arquitetura usada](images/Arquitetura.png)
 
 # Avaliação da Aplicação
 
-> Os testes realizados envolviam verificar se o usuário cadastrado estava realmente salvo
-> dentro do local storage da aplicação.
->
-> Também verificar se as funcionalidades (cadastro de tarefas, listagem de tarefas, conclusão e compensação)
-> estavam plenamente funcionais.
->
-> Verificar também se o cadastro de novos usuários estava funcional. realmente salvando os dados do usuário.
->
-> Verificar se a funcionalidade de alterar dados do perfil realmente permite alterar e salvar os dados
-> do perfilo do usuário.
+Os testes realizados envolviam verificar se o usuário cadastrado estava realmente salvo
+dentro do local storage da aplicação.
+
+Também verificar se as funcionalidades (cadastro de tarefas, listagem de tarefas, conclusão e compensação)
+estavam plenamente funcionais.
+
+Verificar também se o cadastro de novos usuários estava funcional. realmente salvando os dados do usuário.
+
+Verificar se a funcionalidade de alterar dados do perfil realmente permite alterar e salvar os dados
+do perfilo do usuário.
 
 ## Plano de Testes
 
-> Os cenários de testes escolhidos foram os seguintes:
->
-> **Teste de cadastro**
-> Nesse cenário, testamos se a aplicação permitia a um novo usuário se cadastrar e se
-> as telas com as outras funcionalidades estavam acessíveis a ele.
->
-> **Teste de registro de tarefa**
-> Nesse cenário, após logar com um usuário válido, testamos se a aplicação realmente
-> registrava e salvava as tarefas que o mesmo incluia em seu calendário, também
-> verificando se a mesma era marcada como concluída.
->
-> **Teste de alteração de perfil**
-> Neste cenário, após logar com um usuário válido, verificamos se era possível
-> alterar os dados presentes no perfil do mesmo e salvar de forma que os
-> dados poderiam ser alterados de forma simples pelon próprio usuário.
->
-> **Teste de listagem de tarefas**
-> Nesse cenário, testamos se as tarefas apareceriam listadas na aplicação se
-> estivesse logada com um usuário válido e se fossem as tarefas daquele usuário.
+Os cenários de testes escolhidos foram os seguintes:
+
+**Teste de cadastro**
+Nesse cenário, testamos se a aplicação permitia a um novo usuário se cadastrar e se
+as telas com as outras funcionalidades estavam acessíveis a ele.
+
+**Teste de registro de tarefa**
+Nesse cenário, após logar com um usuário válido, testamos se a aplicação realmente
+registrava e salvava as tarefas que o mesmo incluia em seu calendário, também
+verificando se a mesma era marcada como concluída.
+
+**Teste de alteração de perfil**
+Neste cenário, após logar com um usuário válido, verificamos se era possível
+alterar os dados presentes no perfil do mesmo e salvar de forma que os
+dados poderiam ser alterados de forma simples pelon próprio usuário.
+
+**Teste de listagem de tarefas**
+Nesse cenário, testamos se as tarefas apareceriam listadas na aplicação se
+estivesse logada com um usuário válido e se fossem as tarefas daquele usuário.
 
 ## Ferramentas de Testes (Opcional)
 
-> Não foi utilizada uma ferramenta expecifica para testes.
+Não foi utilizada uma ferramenta expecifica para testes.
 
 ## Registros de Testes
 
-> Dentro dos cenários de testes que realizamos, conseguimos realizar todas as tarefas
-> sem maiores problemas, porém inicialmente tivemos que verificar se os usuarios realmente
-> conseguiam acessar todas as funcionalidades perfeitamente se fossem validados.
->
-> Também verificamos se as tarefas eram salvas apenas para aquele usuário e
-> se eram listados perfeitamente.
->
-> As funcionalidades proncipais funcionaram perfeitamente no geral.
+Dentro dos cenários de testes que realizamos, conseguimos realizar todas as tarefas
+sem maiores problemas, porém inicialmente tivemos que verificar se os usuarios realmente
+conseguiam acessar todas as funcionalidades perfeitamente se fossem validados.
+
+Também verificamos se as tarefas eram salvas apenas para aquele usuário e
+se eram listados perfeitamente.
+
+As funcionalidades proncipais funcionaram perfeitamente no geral.
 
 # Referências
 
