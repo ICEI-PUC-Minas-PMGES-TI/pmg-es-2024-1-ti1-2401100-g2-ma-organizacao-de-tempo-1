@@ -1,0 +1,7 @@
+[build]
+  base = ""
+  publish = "public"
+  # command = "npm run build"  # Descomente se precisar de um comando de build
+
+[functions]
+  directory = "functions"
