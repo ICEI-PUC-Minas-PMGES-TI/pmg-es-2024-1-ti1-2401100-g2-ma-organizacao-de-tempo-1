@@ -40,7 +40,6 @@ Os membros do grupo são:
   - [Divisão de Papéis](#divisão-de-papéis)
   - [Ferramentas](#ferramentas)
   - [Controle de Versão](#controle-de-versão)
-- [**############## SPRINT 1 ACABA AQUI #############**](#-sprint-1-acaba-aqui-)
 - [Projeto da Solução](#projeto-da-solução)
   - [Tecnologias Utilizadas](#tecnologias-utilizadas)
   - [Arquitetura da solução](#arquitetura-da-solução)
@@ -206,9 +205,6 @@ Branches que tinham problemas não resolviveis ou de alta complexidade era verif
 
 ![Exemplo de Wireframe](images/Github-Workflow.png)
 
-# **############## SPRINT 1 ACABA AQUI #############**
-
-
 # Projeto da Solução
 
 O projeto da solução foi realizado no figma, sendo mais tarde passado para as linguagens
@@ -284,11 +280,10 @@ As funcionalidades proncipais funcionaram perfeitamente no geral.
 
 # Referências
 
-......  COLOQUE AQUI O SEU TEXTO ......
+MIRO, G2 - Má Organização do Tempo 1. Disponível em: https://miro.com . Acesso em: 14 de abril 2024<br/>
+Github, Repositório. Disponível em: https://github.com . Acesso em: 30 de junho 2024<br/>
+Netfly, Hospedagem. Disponível em: https://netlify.com. Acesso em: 30 de junho 2024<br/>
+Figma, Design. Disponível em: https://www.figma.com. Acesso em: 14 de abril 2024<br/>
+Eurekka, Rotina e Saúde Mental: 7 dicas práticas para se organizar. Disponível em: https://blog.eurekka.me/rotina-e-saude-mental/?ist_privacy_policy=accepted. Acesso em: 19 de maio 2024<br/>
 
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados
-> no desenvolvimento do trabalho.
-> 
-> **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
+
