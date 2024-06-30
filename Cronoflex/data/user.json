@@ -1,0 +1,63 @@
+{
+    "id": 1,
+    "username": "bernardo",
+    "email": "bernardo@example.com",
+    "password": "hashed_password",
+    "telefone": "(11) 98765-4321",
+    "nascimento": "2000-01-01",
+    "cronoCoins": 100,
+    "tarefas": [
+      {
+        "id": 1,
+        "nome": "Estudar para a prova",
+        "data": "2024-07-01",
+        "inicioTarefa": "10:00",
+        "finalTarefa": "12:00",
+        "frequencia": "diaria",
+        "prioridade": "alta",
+        "concluida": false
+      },
+      {
+        "id": 2,
+        "nome": "Exercícios",
+        "data": "2024-07-01",
+        "inicioTarefa": "18:00",
+        "finalTarefa": "19:00",
+        "frequencia": "diaria",
+        "prioridade": "baixa",
+        "concluida": true
+      }
+    ],
+    "contatos": [
+      {
+        "id": 1,
+        "nome": "Maria",
+        "email": "maria@example.com",
+        "assunto": "Dúvida sobre o projeto",
+        "mensagem": "Gostaria de saber mais detalhes sobre o projeto."
+      },
+      {
+        "id": 2,
+        "nome": "João",
+        "email": "joao@example.com",
+        "assunto": "Sugestão de melhoria",
+        "mensagem": "Seria interessante adicionar uma nova funcionalidade."
+      }
+    ],
+    "historico": [
+      {
+        "id": 1,
+        "tipo": "conclusão",
+        "prioridade": "alta",
+        "valor": 60,
+        "data": "2024-07-01T12:00:00"
+      },
+      {
+        "id": 2,
+        "tipo": "não conclusão",
+        "prioridade": "baixa",
+        "valor": -10,
+        "data": "2024-07-01T18:00:00"
+      }
+    ]
+  }
