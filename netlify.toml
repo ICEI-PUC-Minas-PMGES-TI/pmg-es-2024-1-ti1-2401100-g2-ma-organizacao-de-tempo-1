@@ -1,6 +1,6 @@
 [build]
   base = ""
-  publish = "public"
+  publish = "Cronoflex/public"
   # command = "npm run build"  # Descomente se precisar de um comando de build
 
 [functions]
