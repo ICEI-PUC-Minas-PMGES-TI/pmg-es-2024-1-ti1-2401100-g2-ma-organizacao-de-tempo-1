@@ -202,11 +202,6 @@ A divisão de tarefas foi que cada integrante ficará com 2 funcionalidades, sej
 > para uso dentro da feeamenta como um todo.
 > Branches que tinham problemas não resolviveis ou de alta complexidade era verificadas e corrigidas se possivel.
 > 
-> **Links Úteis**:
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
-> - [5 Git Workflows & Branching Strategy to deliver better code](https://zepel.io/blog/5-git-workflows-to-improve-development/)
->
 > **Exemplo - GitHub Feature Branch Workflow**:
 >
 > ![Exemplo de Wireframe](images/Github-Workflow.png)
@@ -216,11 +211,10 @@ A divisão de tarefas foi que cada integrante ficará com 2 funcionalidades, sej
 
 # Projeto da Solução
 
-......  COLOQUE AQUI O SEU TEXTO ......
+> O projeto da solução foi realizado no figma, sendo mais tarde passado para as linguagens
+> utilizadas para confeccionar uma página web.
 
 ## Tecnologias Utilizadas
-
-......  COLOQUE AQUI O SEU TEXTO ......
 
 > Tendo em vista que o projeto é uma aplicação Web, as tecnologias
 > usadas para programar foram:
@@ -228,7 +222,7 @@ A divisão de tarefas foi que cada integrante ficará com 2 funcionalidades, sej
 >
 > A IDE escolhida para programar a solução foi:
 > VisualCode
-
+>
 > Utilizamos o framework Bootstrap para facilitar a implementação e o uso de responsividade
 
 ## Arquitetura da solução
@@ -275,13 +269,7 @@ A divisão de tarefas foi que cada integrante ficará com 2 funcionalidades, sej
 
 ## Ferramentas de Testes (Opcional)
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Comente sobre as ferramentas de testes utilizadas.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+> Não foi utilizada uma ferramenta expecifica para testes.
 
 ## Registros de Testes
 
