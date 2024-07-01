@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Definição da fonte personalizada */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+header {
+    background-color: rgba(113, 201, 236, 255);
+}
+
+.not{
+    margin-right: 20px;
+}
+
+.imgdeperfil{
+    margin-right: 20px;
+}
+
+.config{
+    margin-right: 10px;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 3%;
+}
+
+h1{
+    font-weight: bold;
+}
+
+h2{
+    font-weight: bold;
+}
+
+#hoje{
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+#ontem{
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+#anteriores{
+    margin-left: 2%;
+}
+
+.boxnotificacao {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    background-color: rgba(113, 201, 236, 255);
+    border: 5px solid #FFE500;
+    border-radius: 50px;
+}
+
+.boxnotificacao img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.boxnotificacao p{
+    position: relative;
+    top: 8px;
+}
+
+.horariotarefa {
+    margin-left: auto;
+    font-size: 0.9em;
+    color: #555;
+}
